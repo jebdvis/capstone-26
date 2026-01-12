@@ -1,6 +1,17 @@
 ---
 title: Main Devlog
 ---
+## January 11/12, 2026
+Did some amazing procrastination of going to the library to work and then not feeling that environment, so I went to where I work my job to do work in the tea house there, but of course it was full, so I just talked to my coworkers for a bit and went home to watch half an episode of The Pitt. My resolve is truly unmatched. After that way too long of a time, I got to work on my project. 
+
+My main goal for this week is to get get a component system working for my puzzles that lets me attach abilities/effects to each of the puzzles. This will let me stack these abilities on top of each other without worrying about too much conflict between the abilities. Also reduces the hard coding of everything, making everything a lot more modular and easy to work with. Though I also want to add effect components on the separate rails of the puzzles, I started with a component system that applies to the whole of the puzzle, rather than specific sections of it. These puzzle encompassing abilities are the main focus of mechanics chance for the puzzles, which is why I chose to work on it first. It's fairly simple at the component management level since there's only a few components and a handful of puzzles that will be used. 
+
+The ability components that I want for a puzzle can be added to an array in the game engine inspector, which then the puzzle itself reads the abilities it has attached to it, executing the specific code per ability at the script level of the puzzle. Since the components are executed by the puzzle they are attached to, there isn't any dependency between the components. As of Jan 12, I have a component that allows for the player to "shift" the puzzle between two different puzzles while working on them at the same time.
+
+### Shifting Ability Example
+![[Screen Recording 2026-01-12 at 3.18.59 PM.mov]]
+
+This is, of course, visually lacking, but allows me to begin to test the capabilities of this mechanic. I'm writing this almost immediately after finishing this mechanic, so I have not had time to test, but I will be shortly.
 ## January 9, 2026
 I've spent my time today for the most part trying to set up this very devlog to show up on my Github website. It's showing up but being a bit squirrelly on showing up, I think it has something to do with the Quartz building that it's using. ANYWAYS, I also have to work on this project instead of procrastinating with things that relate to the project but aren't actually the project and with that I've got some goals to reach before next week:
 ### Week 1 Goals
