@@ -1,6 +1,18 @@
 ---
 title: Main Devlog
 ---
+# Week 1
+## January 13, 2026
+My original concept for the visuals of the game were comprised mostly of just pixelating the textures of the 3D models of the game and not doing too much on the shader side of things. Even for lighting, I was planning on just baking the lighting, so it was consistent but left it fairly flat. It kinda looked like Minecraft, which I didn't really like for this game:
+![[TestRender1.png]]
+Elsewhere in the devlogs, I mention a video from a GodotFest talk(https://www.youtube.com/watch?v=cfipwefB0Ac) which inspired me to take a different approach to my visuals. The visual style for Godot, developed by Antti Tiihonen, combines common techniques of game visuals into a more unique approach. Commonly you see games either using realistic lighting and textures or more low fidelity approaches using low quality textures/rendering with flat baked lighting. Tiihonen utilizes Godot's fairly complex lighting systems and combines it with a dithering shader, like how a retro game would appear with. This allows for textures to be fairly simple in their creation, using simple shapes as markers of detail, while still having a nice dynamic lighting that reacts to the world and still looks good in a lower fidelity resolution:
+![[Screenshot 2026-01-13 at 8.37.29 PM.png]]
+I really like his approach of this visual style, though there are multiple aspects I want to change to make it my own/work with my game better. I would certainly want to use a different color palette than he uses, and I almost feel as if the granularity of the filter is too much. I also want to use 3D models that aren't voxel based, like Tiihonen uses, which I think will show very differently in this style. The lighting is fairly dark in how he uses it, and I think a more sterile lighting would better fit my game, although I need to do some in engine tests first. 
+
+This will greatly speed up my 3D asset creation as well, as before I was creating models in Blender, then exporting to Substance Painter to meticulously texture my models, then put a pixelate texture over that to create the style I wanted. The pixelating filter was often not consistent enough to make models look similar and every model I wanted to texture required a new Substance Painter file, which is just a pain in the ass. Using Tiihonen's approach, I could simply model in Blender AND do simple texture painting in Blender as well, greatly refining my 3D pipeline. 
+
+I want the 2D portions of the game to take place with a monochromatic CRTish look. I really like retrofuturist cyberpunk aesthetics, and I think they work really well with the games themes. The 2D parts of the game are going to take place on a terminal in the test chamber that will be themed in this way, and having a monochromatic, or tricolor display would work well with that styling:
+![[67f13efb9588ea2f2a2d213f7301f8d6.jpg|300]]![[e963b66200ba48a0cb2cb9a3dd7ac4e0.jpg]]
 ## January 11/12, 2026
 Did some amazing procrastination of going to the library to work and then not feeling that environment, so I went to where I work my job to do work in the tea house there, but of course it was full, so I just talked to my coworkers for a bit and went home to watch half an episode of The Pitt. My resolve is truly unmatched. After that way too long of a time, I got to work on my project. 
 
@@ -12,6 +24,7 @@ The ability components that I want for a puzzle can be added to an array in the 
 ![[Screen Recording 2026-01-12 at 3.18.59 PM.mov]]
 
 This is, of course, visually lacking, but allows me to begin to test the capabilities of this mechanic. I'm writing this almost immediately after finishing this mechanic, so I have not had time to test, but I will be shortly.
+# Week 0
 ## January 9, 2026
 I've spent my time today for the most part trying to set up this very devlog to show up on my Github website. It's showing up but being a bit squirrelly on showing up, I think it has something to do with the Quartz building that it's using. ANYWAYS, I also have to work on this project instead of procrastinating with things that relate to the project but aren't actually the project and with that I've got some goals to reach before next week:
 ### Week 1 Goals
