@@ -1,6 +1,7 @@
 ---
 title: Main Devlog
 ---
+--- 
 # Week 1
 ## January 13, 2026
 My original concept for the visuals of the game were comprised mostly of just pixelating the textures of the 3D models of the game and not doing too much on the shader side of things. Even for lighting, I was planning on just baking the lighting, so it was consistent but left it fairly flat. It kinda looked like Minecraft, which I didn't really like for this game:
@@ -25,6 +26,8 @@ The ability components that I want for a puzzle can be added to an array in the 
 ![[Screen Recording 2026-01-12 at 3.18.59 PM.mov]]
 
 This is, of course, visually lacking, but allows me to begin to test the capabilities of this mechanic. I'm writing this almost immediately after finishing this mechanic, so I have not had time to test, but I will be shortly.
+
+---
 # Week 0
 ## January 9, 2026
 I've spent my time today for the most part trying to set up this very devlog to show up on my Github website. It's showing up but being a bit squirrelly on showing up, I think it has something to do with the Quartz building that it's using. ANYWAYS, I also have to work on this project instead of procrastinating with things that relate to the project but aren't actually the project and with that I've got some goals to reach before next week:
