@@ -7,7 +7,7 @@ title: Main Devlog
 For work on my game, I mostly started implementation of being able to add components to specific rails/tracks on the puzzle. This allows for specific effects/abilities on certain parts of the puzzle, rather than the whole puzzle. The components will work fairly similarly to how the whole puzzle components work, but unfortunately I've ran into a problem with the engine in a tool script I was creating to make adding components easier. I've got a friend who luckily has had this same problem and is going to send me his solution tomorrow. I know how the rest of the system will work once that is resolved.
 
 My goals for the week were:
-- Component system to attach abilities/effects to paths/path points ^57bb5d
+- Component system to attach abilities/effects to paths/path points
 	- At least one ability/effect to accompany, but want to have 2 or 3
 - Test component system as it's constructed as well as for general feel for game
 	- Continuing controller input and how it feels, especially if more buttons are added in for abilities/effects
@@ -49,9 +49,7 @@ This is, of course, visually lacking, but allows me to begin to test the capabil
 I've spent my time today for the most part trying to set up this very devlog to show up on my Github website. It's showing up but being a bit squirrelly on showing up, I think it has something to do with the Quartz building that it's using. ANYWAYS, I also have to work on this project instead of procrastinating with things that relate to the project but aren't actually the project and with that I've got some goals to reach before next week:
 ### Week 1 Goals
 
-^15adb9
-
-- Component system to attach abilities/effects to paths/path points ^57bb5d
+- Component system to attach abilities/effects to paths/path points 
 	- At least one ability/effect to accompany, but want to have 2 or 3
 - Test component system as it's constructed as well as for general feel for game
 	- Continuing controller input and how it feels, especially if more buttons are added in for abilities/effects
