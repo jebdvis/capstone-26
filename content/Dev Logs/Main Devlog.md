@@ -1,6 +1,19 @@
 ---
 title: Main Devlog
 ---
+# Week 2
+## January 15, 2026
+OMGGGGGGG Iteration 1 next !!!! so exciting . 
+
+### Week 2 Goals
+- 2D puzzle design and testing
+	- Would like to get implementation started in engine by the end of week 2 as well to show for presentation. Definitely ideal condition.
+	- Do testing before it's implemented in engine, since who knows how far that will actually get in engine.
+- Blocked out level
+	- Simple greybox in engine
+	- Maybe some fidelity since it's a fairly simple room layout\
+- Keep testing and iterating on puzzle effects and abilities
+
 --- 
 # Week 1
 ## January 14, 2026
