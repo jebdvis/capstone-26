@@ -3,6 +3,15 @@ title: Main Devlog
 ---
 --- 
 # Week 1
+## January 14, 2026
+For work on my game, I mostly started implementation of being able to add components to specific rails/tracks on the puzzle. This allows for specific effects/abilities on certain parts of the puzzle, rather than the whole puzzle. The components will work fairly similarly to how the whole puzzle components work, but unfortunately I've ran into a problem with the engine in a tool script I was creating to make adding components easier. I've got a friend who luckily has had this same problem and is going to send me his solution tomorrow. I know how the rest of the system will work once that is resolved.
+
+My goals for the week were:
+![[Main Devlog#Week 1 Goals]]
+
+I made good progress on the component systems for the game, giving good leeway for testing the mechanics of the puzzles this next week. I'm not too happy with how I spent my time this week; I watched all of the first season of The Pitt and the newest episode out, which was great, but I really could've put more time into this to get further than I am now. I've set up a place in my apartment that isn't where my desktop is, hoping that I'll be able to be more efficient in a separate space more set out for work, which has been nice so far.
+
+I worked with the controls of the puzzles a bit to try and make them feel better from the feedback I've gotten so far, but I think I need to do more testing on it. When ever I use the controls, I keep trying to use controls that I think will intuitively work with these rotation puzzles, but it's not how I have the controls set up. I'm not quite sure what controls I'm expecting should work for the puzzles when I do that, so I want to see what others have to say on that. No unexpected lessons, just the same old lesson of if you don't do things earlier, you've got more things to do later. One day I'll internalize that
 ## January 13, 2026
 My original concept for the visuals of the game were comprised mostly of just pixelating the textures of the 3D models of the game and not doing too much on the shader side of things. Even for lighting, I was planning on just baking the lighting, so it was consistent but left it fairly flat. It kinda looked like Minecraft, which I didn't really like for this game:
 ![[TestRender1.png]]
