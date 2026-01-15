@@ -7,7 +7,14 @@ title: Main Devlog
 For work on my game, I mostly started implementation of being able to add components to specific rails/tracks on the puzzle. This allows for specific effects/abilities on certain parts of the puzzle, rather than the whole puzzle. The components will work fairly similarly to how the whole puzzle components work, but unfortunately I've ran into a problem with the engine in a tool script I was creating to make adding components easier. I've got a friend who luckily has had this same problem and is going to send me his solution tomorrow. I know how the rest of the system will work once that is resolved.
 
 My goals for the week were:
-![[Main Devlog#Week 1 Goals]]
+- Component system to attach abilities/effects to paths/path points ^57bb5d
+	- At least one ability/effect to accompany, but want to have 2 or 3
+- Test component system as it's constructed as well as for general feel for game
+	- Continuing controller input and how it feels, especially if more buttons are added in for abilities/effects
+	- Going to try and set up pipeline to share builds digitally with people to allow them to simply download an .exe from a file share link to test the game.
+- Ideation on visual styling for visual redesign
+- The framework that the abilities that don't exist on the puzzle will exist
+	- How will the time manipulation, redshift/blueshift, and spaghettification work
 
 I made good progress on the component systems for the game, giving good leeway for testing the mechanics of the puzzles this next week. I'm not too happy with how I spent my time this week; I watched all of the first season of The Pitt and the newest episode out, which was great, but I really could've put more time into this to get further than I am now. I've set up a place in my apartment that isn't where my desktop is, hoping that I'll be able to be more efficient in a separate space more set out for work, which has been nice so far.
 
