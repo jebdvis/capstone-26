@@ -2,6 +2,16 @@
 title: Main Devlog
 ---
 # Week 2
+## January 19, 2026
+Last week broke my brain a bit, so I had to take a good break over the weekend with work and general consumption of media. I spent a lot of time last week doing that too, perhaps you could call it procrastination, but after that break, I'm feeling much better(less brain melt) about working on this project. I'm starting today by designing my 2D puzzle system. This puzzle system will be fairly prominent in the game, the same amount as the 3D puzzles, though the 2D puzzles will rely more on complexity to increase difficulty, rather than introduction of new mechanics to increase difficulty. The point of the 2D puzzles is to eventually overwhelm the player with complexity using a simple mechanic to simulate a sense of anxiety.
+
+I want the 2D puzzles to be line connecting/pipe connecting puzzles. My original inspiration are the puzzles used in [The Witness](https://www.youtube.com/watch?v=Mj3nCfB64AI), though they introduce mechanics to increase difficulty, as well as increase complexity overall, which I think would be overwhelming if I did with the 3D puzzles also bringing in new mechanics. I know I said I want the player to be overwhelmed, but I think that bringing in new mechanics for both the 3D and 2D puzzles would be overwhelming to a point of wanting to not play the game. I was pointed to Rusty Lake's Cube Escape point and click puzzles for some inspiration of line based puzzles. In their game *The Cave*, they have a puzzle where the player must "untangle" some nodes that are connected together. 
+![](https://youtu.be/d80AQGv7BfE?t=481)
+It's a fairly simple mechanic, but has the ability to be made more complex by just adding more nodes together.
+## January 16, 2026
+Went back into working on some of the components for the puzzles. I tried to add portals that can be placed on the puzzles to allow for the puzzle moving pieces to teleport across the puzzles. I had started to add ways to add portals onto the puzzles on the 15th, but didn't finish it; was trying to make a system at 1 am and felt my brain melting from the lack of glucose it had so I had to stop. Today I resumed the system, having to start from scratch after making a mess of logic the night before; it was terribly cyclical and didn't make sense, overcomplicated in a lot of ways too.
+
+I spent a lot of the work on the puzzles today fixing the logic of attaching the portals to the puzzle as well as the logic that connects them, letting the portals reference each other. Logic to make movers go through isn't completed yet, but should be fairly easy to add with what I have. Not too happy with how much time I spent on the tools of the mechanic and not the mechanic itself, but what I did make will make using the portals so much easier down the line, especially adding them to multiple puzzles. I really want to stay away from hard coding as much as possible, and using this component system is certainly going to help greatly with that. This is my first time utilizing a component system in a game, so I'm getting used to how they work, but I think it going to greatly benefit my game overall, especially with speed of iteration on puzzles.
 ## January 15, 2026
 OMGGGGGGG Iteration 1 next !!!! so exciting . 
 
