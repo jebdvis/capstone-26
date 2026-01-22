@@ -2,6 +2,25 @@
 title: Main Devlog
 ---
 # Week 2
+## January 21, 2026
+### Level Blockout
+My time today working on my capstone was mostly of the blockout of the room the player is inside of for the duration of the game. It's a pretty simple 2 room test chamber where the player is in one side looking into the other room, where the 3D puzzle is they must rotate to solve. Shapes are very simple and I used some placeholder materials to give an idea for color and lighting of the environment, though everything I used will eventually be replaced.
+![[Blockout1.png]]![[Blockout2.png]]![[Blockout3.png]]![[Blockout4.png]]![[Blockout5.png]]
+### Week 2 Progress Report
+My goals for this week were: 
+- 2D puzzle design and testing
+	- Would like to get implementation started in engine by the end of week 2 as well to show for presentation. Definitely ideal condition.
+	- Do testing before it's implemented in engine, since who knows how far that will actually get in engine.
+- Blocked out level
+	- Simple greybox in engine
+	- Maybe some fidelity since it's a fairly simple room layout
+- Keep testing and iterating on puzzle effects and abilities
+
+I got all of these done luckily. Very happy to have gotten the 2D puzzles implemented in engine. Spent a lot more time on capstone this week, which I'm happy with. I did give myself a bit of a break over the weekend, which I don't want to do every weekend, which will help spread out my work a bit more over the week. I spent a majority of my time working on last Friday and Tuesday, with only a few hours spread through the other days of the week. I definitely hit more than 12 hours this week, but I don't think it's sustainable to pack my workload vertically on only a few days a week.
+
+Main integration of feedback is definitely on the controller input. It still has a few kinks in it, but now that I know it's what I naturally want to do with the controller to rotate the puzzle, I have high hopes for it. Gonna keep chugging on puzzle mechanics and design to keep that testing rolling.
+
+The time to make some of the things I made definitely exceeded my expectation of time, but it's just prepared me to make sure I give myself the time to do the things I need to do. I'm fine with spending the time on this, but I want to be able to be more efficient with the time that I do use. Though with the more time I spend in engine, I'll be able to sniff out the bugs more easily, so just gotta keep going. Overall good time spent on capstone, and I hope it's a good foundation for things to come.
 ## January 20, 2026
 ### Controls cont.
 I've gone through much strife today. Before that, I forgot to finish off talking about the new controls I wanted to implement yesterday. Started using quaternions to do the new control scheme, which seems promising. They're weird math things, but on the most basic level, they have two components: a 3D normalized vector that points away from the object's center and an amount of rotation around that axis. I'm heavily simplifying that, if that's even what they actually are. Either way, the controls of it are half baked, but I think with some smoothing out of the code it'll work well.
@@ -48,7 +67,7 @@ OMGGGGGGG Iteration 1 next !!!! so exciting .
 	- Do testing before it's implemented in engine, since who knows how far that will actually get in engine.
 - Blocked out level
 	- Simple greybox in engine
-	- Maybe some fidelity since it's a fairly simple room layout\
+	- Maybe some fidelity since it's a fairly simple room layout
 - Keep testing and iterating on puzzle effects and abilities
 
 --- 
