@@ -1,6 +1,15 @@
 ---
 title: Main Devlog
 ---
+# Week 3
+## January 22, 2026
+### Week 3 Goals
+- Puzzle Mechanics Implementation for 2D and 3D
+	- Test in Parallel
+	- Document for Puzzle Progression
+- 2D/3D Asset Creation
+	- Base Level Lighting and Post Process Shaders
+	- Focusing on environment and 2D terminal assets
 # Week 2
 ## January 21, 2026
 ### Level Blockout
