@@ -2,6 +2,11 @@
 title: Main Devlog
 ---
 # Week 3
+## January 26, 2026
+### Newwwwwww Controls
+I've been working on my new control scheme for my game, and have it in a working state today. Tested it with some folk, who found the controls initially confusing, but once gotten the hang of, felt a lot more fun to use than controller axes being transposed to specific rotation axes. The control scheme is a bit similar to Katamari's controls. You can use both joysticks pointed in a direction to roll that direction. I'm also testing being able to point just a single joystick to be able to rotate the puzzle. Like in Katamari, as well, you can do the joysticks in opposite direction in the up and down vectors to rotate the puzzle. In the video below, you can see the joystick movements and the corresponding movement of the puzzle.
+![[Screen Recording 2026-01-26 at 3.24.52 PM.mov]]
+I intend to test these controls with people who don't have as much familiarity with gamepad controllers to see how they feel the controls work. I think the controls are not necessarily intuitive with how controller joysticks are usually used, but make sense in how they affect the puzzles rotation in its own context.
 ## January 22, 2026
 ### Week 3 Goals
 - Puzzle Mechanics Implementation for 2D and 3D
