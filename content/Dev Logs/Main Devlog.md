@@ -3,8 +3,20 @@ title: Main Devlog
 ---
 # Week 3
 ## January 28, 2026
+### Week 3 Progress Report
+My goals for this week were: 
+- Puzzle Mechanics Implementation for 2D and 3D
+	- Test in Parallel
+	- Document for Puzzle Progression
+- 2D/3D Asset Creation
+	- Base Level Lighting and Post Process Shaders
+	- Focusing on environment and 2D terminal assets
+I was pretty happy with my time management, although I wish there were a few more hours over the weekend. Fridays-Sundays keep being week days for my progress. Feedback was big for refining the controller inputs for the game, I think that with a bit of tweaking will feel great. I had input on the 2D and 3D visuals as I developed them which was nice. Didn't get as much time in on 2D stuff as I wanted, but I do think that the 3D puzzles need more attention currently.
+### 2D Puzzle Visuals
+The 2D puzzles take place on a terminal in the test chamber. I want it to have a CRT like overlay, which I've implemented in Godot before, so I know that I will be able to do that. I already have the 2D puzzle mechanics mostly figured out, so texturing them shouldn't be too difficult, just mostly switching out the placeholder sprites I have, placing other static 2D assets, and some shader magic. In the final iteration, I want to have a moving blackhole shader or video in the bottom right, either if thats a shader or a looped video made in Blender.
+![[GdDMvQAAAAZJREFUAwDRWVeWp3FdTwAAAABJRU5ErkJggg.png]]
 ### Visuals In Engine
-To get a styling down for the 3D assets in the game, I wanted to make sure it would match the dithering post process that I would have setup for the game, so I added a rough post process filter to help guide what the 3D assets would look like. The [post process shader](https://github.com/Donitzo/godot-color-dither?tab=readme-ov-file) is a fairly simple dithering effect that is build for Godot by Donitzo. Along with the shaders is a dither palette generator that takes an image of 2-16 colors and outputs an image mapping those colors to dither noise. Along with the dither post process filter, I also configured Godot's real time lighting features. The two come together to create a colorful, but dark visual, matching the dark, cybery visuals I wanted for the game(Dithering might be a bit distorted from Screendoor effect if the images are not viewed at a larger size).
+To get a styling down for the 3D assets in the game, I wanted to make sure it would match the dithering post process that I would have setup for the game, so I added a rough post process filter to help guide what the 3D assets would look like. The [post process shader](https://github.com/Donitzo/godot-color-dither?tab=readme-ov-file) is a fairly simple dithering effect that is build for Godot by Donitzo. Along with the shaders is a dither palette generator that takes an image of 2-16 colors and outputs an image mapping those colors to dither noise. Along with the dither post process filter, I also configured Godot's real time lighting features. The two come together to create a colorful, but dark visual, matching the dark, cybery visuals I wanted for the game(Dithering might be a bit distorted from Screendoor effect if the images are not viewed at a larger size). The first image is of the test chamber where the 3D puzzles are held and solved; the second image is of the room the player is in for the game. The red panel on the back wall is to be a placeholder for the terminal the player will interact with for information and to solve the 2D puzzles.
 ![[Screenshot 2026-01-28 at 8.32.32 PM.png]]
 ![[Screenshot 2026-01-28 at 8.40.55 PM.png]]
 ### New Path Effect
