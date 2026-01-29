@@ -1,6 +1,20 @@
 ---
 title: Main Devlog
 ---
+# Week 4
+## January 29, 2026
+### UX/UH Testing 1
+- Most testing is going to involve both 2D and 3D puzzles in usability interviews with varying game familiarity in players.
+- Testing UI and visual elements
+	- This is mostly to make sure the postprocessing(dithering in 3D/CRT filter in 2D) is readable and playable. Also testing this to get feedback on if the vibe people get from hearing about the game matches the visual style.
+### Week 4 Goals
+- Many a puzzle created
+	- Creation of 3D puzzles to test varying levels of mechanics integration.
+	- 2D puzzle creation
+	- Testing these, changing/adding mechanics if needed
+- 3D puzzle visual rework for dither postprocessing
+	- Mostly to look at how the "wireframe" look of the puzzles will work in the shader stylization
+- 2D puzzle/terminal assets integrated with 2D puzzle
 # Week 3
 ## January 28, 2026
 ### Week 3 Progress Report
