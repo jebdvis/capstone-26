@@ -2,6 +2,32 @@
 title: Main Devlog
 ---
 # Week 4
+## February 1, 2026
+### Course of Testing
+#### Things to Test:
+- Puzzle Mover Feel
+- General Base Puzzles (2D & 3D)
+- 3D Mechanics(Compounding)
+	- Portals
+	- Time Dilation
+	- Red Shift
+- Puzzle Difficulty Increase
+	- Explicitly test for 2D
+	- Keeping notes for 3D puzzle progression, but not explicitly testing for it
+#### Materials for Testing:
+- Multiple 3D puzzles at various sizes and density of rails
+- Compounding mechanics on 3D puzzles(in order seen below; at least one puzzle per compound, 3)
+	- Portals
+	- Redshift
+	- Time Dilation
+- Puzzles to test mechanics individually
+- 2D puzzles with varying amount of nodes to find how difficulty changes with how many nodes exist
+
+| Test Material                                         | Things to Test                  | Things to Look For                                                                                                                                            |
+| ----------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Base 3D Puzzles at various sizes and density of rails | Puzzle Mover Feel; General Feel | What size do people like; how does rail amount effect difficulty; what rail formations do people like/not like; reactivity; does a cube formation feel good;  |
+|                                                       |                                 |                                                                                                                                                               |
+
 ## January 29, 2026
 ### UX/UH Testing 1
 - Most testing is going to involve both 2D and 3D puzzles in usability interviews with varying game familiarity in players.
