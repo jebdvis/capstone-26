@@ -5,6 +5,7 @@ title: Main Devlog
 ## February 1, 2026
 ### Course of Testing
 #### Things to Test:
+- Time to complete
 - Puzzle Mover Feel
 - General Base Puzzles (2D & 3D)
 - 3D Mechanics(Compounding)
@@ -23,10 +24,11 @@ title: Main Devlog
 - Puzzles to test mechanics individually
 - 2D puzzles with varying amount of nodes to find how difficulty changes with how many nodes exist
 
-| Test Material                                         | Things to Test                  | Things to Look For                                                                                                                                            |
-| ----------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Base 3D Puzzles at various sizes and density of rails | Puzzle Mover Feel; General Feel | What size do people like; how does rail amount effect difficulty; what rail formations do people like/not like; reactivity; does a cube formation feel good;  |
-|                                                       |                                 |                                                                                                                                                               |
+| Test Material                                                               | Things to Test                                                                                                             | Things to Look For                                                                                                                                                                                        |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Base 3D Puzzles at various sizes and density of rails                       | Puzzle Mover Feel; General Feel                                                                                            | What size do people like; how does rail amount effect difficulty; what rail formations do people like/not like; reactivity; does a cube formation feel good; size or rail density change for progression? |
+| One puzzle per compounded puzzle mechanic(Portals, Redshift, Time Dilation) | Combination of puzzle mechanics; how mechanics work together; Time to Complete                                             | Does progression feel good; do mechanics feel meaningful in the puzzles; does it feel like enough puzzles; see if other ideas for mechanics could be good to add or replace other mechanics               |
+| 2D Puzzles with varying amounts of nodes                                    | Puzzle difficulty increase; scoping if just node amount increases difficult or if node placement matters; Time to Complete | What node amount is a too overwhelming vs what is too easy; Do people want more mechanical things at work; Does it feel like a good contrast to 3D puzzles                                                |
 
 ## January 29, 2026
 ### UX/UH Testing 1
