@@ -3,6 +3,8 @@ title: Main Devlog
 ---
 # Week 4
 ## February 2, 2026
+### 3D Puzzle Mechanics Test
+To test the mechanics and how they compound on each other, I'm placing the mechanics on a copy of the larger, low density puzzle I'm testing for the base puzzles. I want to have the base puzzle be more of a control, since I'm more interested in how the mechanics work together and how they matter in context of the puzzles as a whole.
 ### 3D Base Puzzles
 To test the 3D puzzles in their base state, I created a larger puzzle that has a lower density and a smaller puzzle that has a higher density of rails. The two have about the same amount of rails, but play a bit differently in size on screen and how fast it takes to get the follower around the puzzle.
 ### 2D Puzzle Tests
