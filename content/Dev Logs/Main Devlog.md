@@ -2,33 +2,19 @@
 title: Main Devlog
 ---
 # Week 4
+## February 2, 2026
+### 3D Base Puzzles
+To test the 3D puzzles in their base state, I created a larger puzzle that has a lower density and a smaller puzzle that has a higher density of rails. The two have about the same amount of rails, but play a bit differently in size on screen and how fast it takes to get the follower around the puzzle.
+### 2D Puzzle Tests
+For testing 2D Puzzles, I've created 3 different puzzles that I see as easy, medium, and hard. I've, of course, been handing this puzzle for a bit now, so I'm fairly used to the mechanics, so I'm interested to see how the difficulty of these puzzles is for someone who has little or no experience with this kind of puzzle. I'm able to solve the 'hard' puzzle fairly quickly at this point in a time that I think would be maybe a bit too short for the game, but if done by someone who hasn't been messing with these puzzles could be a good time. Or maybe too long. But we shall see.
 ## February 1, 2026
 ### Course of Testing
-#### Things to Test:
-- Time to complete
-- Puzzle Mover Feel
-- General Base Puzzles (2D & 3D)
-- 3D Mechanics(Compounding)
-	- Portals
-	- Time Dilation
-	- Red Shift
-- Puzzle Difficulty Increase
-	- Explicitly test for 2D
-	- Keeping notes for 3D puzzle progression, but not explicitly testing for it
-#### Materials for Testing:
-- Multiple 3D puzzles at various sizes and density of rails
-- Compounding mechanics on 3D puzzles(in order seen below; at least one puzzle per compound, 3)
-	- Portals
-	- Redshift
-	- Time Dilation
-- Puzzles to test mechanics individually
-- 2D puzzles with varying amount of nodes to find how difficulty changes with how many nodes exist
 
-| Test Material                                                               | Things to Test                                                                                                             | Things to Look For                                                                                                                                                                                                                                                                                                                                                                                                                |
-| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Base 3D Puzzles at various sizes and density of rails                       | Puzzle Mover Feel; General Feel                                                                                            | - What size do people like<br>- how does rail amount effect difficulty<br>- what rail formations do people like/not like; reactivity<br>- does a cube formation feel good<br>- size or rail density change for progression?<br>- Does this core mechanic of moving separate movers to different locations feel good<br>- Should movers have to go to specific points or should player have more freedom of where movers should go |
-| One puzzle per compounded puzzle mechanic(Portals, Redshift, Time Dilation) | Combination of puzzle mechanics; how mechanics work together; Time to Complete                                             | - Does progression feel good<br>- do mechanics feel meaningful in the puzzles<br>- does it feel like enough puzzles<br>- see if other ideas for mechanics could be good to add or replace other mechanics                                                                                                                                                                                                                         |
-| 2D Puzzles with varying amounts of nodes                                    | Puzzle difficulty increase; scoping if just node amount increases difficult or if node placement matters; Time to Complete | - What node amount is a too overwhelming vs what is too easy<br>- Do people want more mechanical things at work<br>- Does it feel like a good contrast to 3D puzzles                                                                                                                                                                                                                                                              |
+| Test Material                                                               | Things to Test                                                                                                             | Things to Look For                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Base 3D Puzzles at various sizes and density of rails                       | Puzzle Mover Feel; General Feel                                                                                            | - What size do people like<br>- how does rail amount effect difficulty<br>- what rail formations do people like/not like; reactivity<br>- does a cube formation feel good<br>- size or rail density change for progression?<br>- Does this core mechanic of moving separate movers to different locations feel good<br>- Should movers have to go to specific points or should player have more freedom of where movers should go<br>- Movers visible enough in 3D space, if not how can depth more be represented. |
+| One puzzle per compounded puzzle mechanic(Portals, Redshift, Time Dilation) | Combination of puzzle mechanics; how mechanics work together; Time to Complete                                             | - Does progression feel good<br>- do mechanics feel meaningful in the puzzles<br>- does it feel like enough puzzles<br>- see if other ideas for mechanics could be good to add or replace other mechanics                                                                                                                                                                                                                                                                                                           |
+| 2D Puzzles with varying amounts of nodes                                    | Puzzle difficulty increase; scoping if just node amount increases difficult or if node placement matters; Time to Complete | - What node amount is a too overwhelming vs what is too easy<br>- Do people want more mechanical things at work<br>- Does it feel like a good contrast to 3D puzzles                                                                                                                                                                                                                                                                                                                                                |
 
 ## January 29, 2026
 ### UX/UH Testing 1
