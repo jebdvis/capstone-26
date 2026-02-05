@@ -1,6 +1,12 @@
 ---
 title: Main Devlog
 ---
+# Week 5
+### Week 5 Goals
+- Explore other mechanics that can flesh out one of the possible branches of difficulty the base mechanics of the game can take on
+	- I want to get wacky with it, really letting the themes of the game come through and integrate with the narrative
+- Developing the rough form of the narrative to help inform puzzle progression and other mechanics
+- More 3D asset generation
 # Week 4
 ## February 4, 2026
 ### Week 4 Progress Report
