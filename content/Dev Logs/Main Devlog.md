@@ -123,8 +123,8 @@ Gathered potential mechanics that could work well with the base puzzle mechanic 
 - Developing the rough form of the narrative to help inform puzzle progression and other mechanics
 - More 3D asset generation
 ### 2D Terminal Shaders
-Finished off last week by doing some 2D visual upgrading, and I got a CRT shader on it today to make it feel more like the terminal it's supposed to be on. The video has some different coloring than I see when I run the game which is strange, but the pixelization, color shifting, and slight wobble of the pixels comes through pretty well.
-![[Screen Recording 2026-02-11 at 2.47.50 PM.mov]]
+Finished off last week by doing some 2D visual upgrading, and I got a CRT shader on it today to make it feel more like the terminal it's supposed to be on. Looks a bit better on video, but I'm still tweaking the shader, maybe gonna use a different one for some more control. Definitely gonna change colors too.
+![[Screenshot 2026-02-11 at 9.39.34 PM.png]]
 # Week 4
 ## February 4, 2026
 ### Week 4 Progress Report
