@@ -2,11 +2,129 @@
 title: Main Devlog
 ---
 # Week 5
+## February 11, 2026
+### Week 5 Progress Report
+#### Week 5 Goals
+- Explore other mechanics that can flesh out one of the possible branches of difficulty the base mechanics of the game can take on
+	- I want to get wacky with it, really letting the themes of the game come through and integrate with the narrative
+- Developing the rough form of the narrative to help inform puzzle progression and other mechanics
+- More 3D asset generation
+
+Though I did do everything mentioned in the goals, I do wish there was more time spent on everything. I got sick for the first half of the week, which definitely knocked me out from working on a lot of things, but I still tried to work on more design elements, which I was able to do without sitting in front of a computer for a long time. I'm happy with the work I got done on the mechanics. I think that the brainstorm and figuring out what I wanted and from that what worked and what didn't in theory was really helpful. Developing the narrative and fitting mechanics to that was helpful and I think it's gonna help me a lot with how I'll proceed in the next week with new mechanics. Reworking the mechanics definitely integrated a lot of feedback, a lot of the new ideas for mechanics were developed while conducting tests last week.
+### 3D Things
+I felt the part of the test chamber the player is in feels a bit too flat so I played around with how adding a noise texture to the ground could help make it feel a bit better. I also added a terminal in to the room to make it feel that much more homey. I definitely want to play around with more texturing as well to work with the dithering since without much variation in the texturing it looks a bit blobby.
+![[Screenshot 2026-02-11 at 9.15.23 PM.png]]
+### Outside Mentor Review
+For my other mentor, I talked to a good friend who recently graduated with a computer science degree and is very well acquainted with the Godot engine, making his own world terrain generation, system to climb on enemies as you fight them, and other fun, complex system. I wanted to get his input on my code architecture, making sure I keep things as streamlined as possible for adding new things in through code, mostly the mechanics for the puzzles. I have a pretty good knowledge of good code architecture from other comp sci classes, so I've tried to keep the components for everything fairly in line. After explaining how I set up the components for everything and showing him the code and tools I created for adding components, he said the architecture was pretty good, but in some places, was a bit cyclically referencing; sometimes a puzzle path references a path ability but the ability also references the path. In a better architecture, the ability shouldn't really know the path exists, but he said that since the scope of the ability and path was so small that it wasn't too much to worry about. He said to just be careful about where that happens and know the architecture of everything well enough to be able to know that cyclical reference isn't going to effect anything outside of that, or mess anything else up, which in this case, I was pretty certain when creating it would not.
+### Mechanics Future Organization 
+#### Mechanics That Stick Out(What Beat They Could Fit)
+- Portals that work when lined up - Beat #2
+- Rails fall off as movers move off of them - Beat #3
+- Portals between separated parts of puzzles - Beat #2
+- Axis lock to face - Beat #1(Base Mechanic)
+- Tether movers together for movement reduction or some other effect - Beat #2
+- Gates for certain movers to pass through - Beat #2
+- Puzzle paths morphing into other shapes - Beat #3
+#### Currently Made Mechanics(as of writing)
+- Basic rotation
+- Shift between 2 puzzles
+- Portals
+	- Probably deprecate in favor of other puzzle system
+- Time dilation paths
+Basic rotation, shifting, and time dilation would be good for Beat #1. Portals don't have the kind of meaning/importance to the puzzles right now that I would want them to to keep them in the game.
+
+#### Possible Progression of Mechanics(in terms of narrative) 
+This is more of a layout of how these mechanics could work in order, for the sake of thinking about what works well together and what could be meaningful to the puzzles. This isn't necessarily the order of what I want mechanics to be added in, just where I think the mechanics should be in the progression based on current mechanics. The purpose of this is to help out with subtractive design; finding the things that effect the player and the game and eliminating the things that aren't meaningful or create a less meaningful experience in the presence of a more meaningful mechanic
+##### Beat #1
+- Basic rotation
+- Shifting
+- Time dilation paths
+- Axis lock
+##### Beat #2
+- Portals
+- Separated puzzles(connected by portals)
+- Tethering movers
+- Gates for certain movers
+##### Beat #3
+- Rails falling off as movers move along paths
+- Paths morphing 
+
+##### Notes On This Progression
+- Adding these other mechanics, I think that shifting between puzzles might be too much, especially with either of the mechanics I placed in Beat #3. I think that if I were to do the paths falling off, I would make puzzles that had more of a correct path to complete, and having to figure out exact pathing for two puzzles at once, one of which you couldn't see, then that would be reallyyyyyyy difficult. For the paths morphing, I think that since there's so much visually changing it would just be near impossible to actually complete that puzzle or it would just have people doing random things to solve the puzzle. Overall, I think I want to keep everything mostly visual feedback and I think that shifting would throw many wrenches in many cogs when adding more mechanics.
+- I like the time dilation paths and I think they had a good response in testing, but I'm worried they could become more inconsequential through progression. That could benefit the game though, since I want players to kind of shift priorities around in their head on how to solve puzzles
+- After testing, the portals just didn't feel like they were it. They were on the puzzle but it didn't feel like you needed to use them. I'd had ideas originally to separate puzzles and use portals to connect them and I had some people separately tell me that portals could be used that way, so I think it could work well. When Danny first saw the portals, he had said he liked the idea of portals having to line up to let movers go through, which I really like the concept of.
+- Separating paths on puzzles could be nice and give a similar effect to shifted puzzles without the visual disconnect, but I definitely think they could work best if paired with portals. Maybe separating puzzles could be a good Beat #1 addition and adding portals in Beat #2
+- I've said it a few times, but originally I only had tethering as a movement constraint mechanic in my notes and when I was annotating this progression I added that maybe there could be other effects. I do think that movement constraining is a good mechanic for that, but I can't think of too many effects the tethering could do that would make sense in context of people knowing what a tether does between two things. Maybe the tether could make gravity flip or something if the movers were close enough, but I think have a visual connection between two movers to represent a tether would make more sense with movement constraining. Anyways, tethering could maybe cause another effect to happen
+- Have certain gates only specific movers can go through is another idea I quite like that constrains how the player can solve the puzzle. I know I said for Beat #2 I wanted less physical manipulation for the puzzle, but I think that the concept of making the player adapt how they solve the puzzle to the new mechanics in Beat #2 definitely fits with the effect the gates would have adding them to the puzzles.
+## February 9, 2026
+### Narrative
+#### Beginning
+- Player "wakes up"
+- Fades in from black(or some other transition), player standing next to bed in test chamber.
+- Shutter for test chamber window is closed
+- Terminal is flashing as the only dynamic lighting in room to attract player
+![[IMG_1889.jpg]]
+##### Information for Player
+- Corporate Spiel
+- Player has been assigned to test experimental black hole-powered gravitational device
+- Compensation will follow test completion
+- Begin with calibration test(tutorial puzzle)
+- Please return to terminal after calibration test is complete
+	- Info on untangle puzzle will be given after player returns
+#### Between Beginning and End of Game(3 Beats)
+##### Beat 1
+- Introduce a few 'known' mechanics under pretense of testing material
+- Everything seems operating normally
+- 3D puzzle mechanics not too difficult, no subversion on things taught
+- 2D puzzles are not complex; feels like a simple, necessary task
+##### Beat 2
+- Unexpected effects begin to occur
+	- Maybe effects that don't alter puzzles much physically, but make players have to adapt how they solve them
+- 2D puzzles add more nodes but aren't too much more complex than in Beat 1
+- Some audible/visual effects from black hole
+	- Since I came up with this concept I've wanted to have some kind of light bending shader at the bottom of the screen, like a black hole bending light. could look cool in dither shader.
+##### Beat 3
+- Apparent that device is becoming overwhelmingly unstable
+- Starts to physically effect chamber and puzzles
+- Player can't just adapt too solve 3D; starts using different systems maybe
+- 2D starts to be more complex; maybe they even retangle themselves as player solves them
+#### End
+I haven't really decided how I want the game to come to a close yet. I don't really want the player to explicitly survive the experience, as in through visuals or text it's clearly shown the player survives the ordeal. I'm kind of leaning towards a more vague ending where while the player is solving a 2D or 3D puzzle, the screen just goes black after the roof collapses or something. I think I could be ok if I ended it more implying that the player doesn't survive, for sake of showing that giving your soul to a corporate entity and now taking care of yourself will be your downfall, but I also don't want it too be too dark of an ending, even if it does have psychological horror elements throughout the game.
+## February 7, 2026
+### Mechanic Brainstorm
+Gathered potential mechanics that could work well with the base puzzle mechanic that exists currently. Includes potential mechanics that were discussed during testing as well.
+- Switch to instead of controlling rotation of puzzle, you control gravity
+- Portals that work when they are lined up visually
+- Rails that disappear after puzzle movers move across them
+- Portal between puzzles that are shifted
+- Have puzzles be separated in space and make it so only portals can go between them
+- Rotating paths that change what paths they are connected to
+- Invisible paths
+- Axis lock to nearest face
+	- Not much of a mechanic; more of a quality of life to be able to more exactly control the puzzle more efficiently(maybe, Danny recommended before he found you could rotate the puzzle in a roll motion in front of the camera)
+- Draw a specific shape on the paths with one of the puzzle movers
+- Line up the paths to make a certain shape
+	- There's some instances in The Witness where you have to do things like this
+- When the puzzle is solved, the orientation that the paths are in determines the node layout and connections seen in the 2D puzzles
+- Reverse the controls on the controller
+	- Would be something for when the device the player is testing becomes unstable and messes up controls but kinda feels too on the nose
+- Movers can fall off of the puzzles at certain points
+	- Don't know if it's really something I want to be able to happen
+- Movers connected by tether and can't get too far apart
+	- This could also just be a proximity thing that allows for some other effect if the movers are close enough
+- Gates on paths that are only for certain movers
+	- Could give more control of how players can solve the puzzles
+- The paths of a puzzle can morph their length and orientation allowing for puzzles to morph into different shapes
+	- Kinda first had the idea of turning shifted puzzles into like a tesseract kinda thing where the shifted puzzle starts as the inner cube and then shifts around like the gif below![[1686b99449a18084.gif]]
+## February 5, 2026
 ### Week 5 Goals
 - Explore other mechanics that can flesh out one of the possible branches of difficulty the base mechanics of the game can take on
 	- I want to get wacky with it, really letting the themes of the game come through and integrate with the narrative
 - Developing the rough form of the narrative to help inform puzzle progression and other mechanics
 - More 3D asset generation
+### 2D Terminal Shaders
+Finished off last week by doing some 2D visual upgrading, and I got a CRT shader on it today to make it feel more like the terminal it's supposed to be on. The video has some different coloring than I see when I run the game which is strange, but the pixelization, color shifting, and slight wobble of the pixels comes through pretty well.
+![[Screen Recording 2026-02-11 at 2.47.50 PM.mov]]
 # Week 4
 ## February 4, 2026
 ### Week 4 Progress Report
