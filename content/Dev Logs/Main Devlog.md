@@ -1,6 +1,12 @@
 ---
 title: Main Devlog
 ---
+# Week 6
+## February 12, 2026
+### Week 6 Goals
+- Implement new mechanics and refactor other ones to new mechanics
+- More 3D asset creation
+- 2D assets and shader refining 
 # Week 5
 ## February 11, 2026
 ### Week 5 Progress Report
