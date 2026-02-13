@@ -3,6 +3,40 @@ title: Main Devlog
 ---
 # Week 6
 ## February 12, 2026
+### New Mechanic Technical Plan
+Wrote down how I think they can be implemented into the current structure of the code to help me make them more smoothly, hopefully everything makes enough sense from my mind palace.
+#### New Portals(PointEffect)
+- Should be able to scavenge code for how movers teleport to different locations on the puzzle. Still a bit buggy.
+- To check for the line up of portals, can probably compare the vector of the camera to the vector between the points of the two portal locations
+- The code does't currently check if there's another portal to teleport to on the other path, it's technically just a one way teleport that happens to have two portals at each others teleport spot. Will need to check other portal location and if it's the right pair.
+#### Rails Falling Off(PathEffect)
+- I know when a path mover leaves a path for another path, so I can set up a signal on that to trigger a path to fall
+	- This comes from the code that moves the movers along the path, which can be a bit buggy at intersections. When a mover reaches an intersection of path points, the path that the portal is actually on at that point is a bit unpredictable.
+#### Separated Puzzle
+- Make a puzzle that's separated...........
+#### Axis Lock(Puzzle Rotation Code)
+- Check for what face of puzzle and what orthogonal angle from face is closest and rotate the puzzle to that.
+#### Tether(PuzzleEffect)
+- Check distance between movers in the puzzle local space
+- For movement constraint, can kill movement if the distance reaches a certain threshold
+- Other effects, the effect can occur when a similar threshold is met
+#### Gates for Certain Movers(Attachable Scene)
+- This could fit under the PointEffect component category, but I think it would make more sense as a separate scene I can attach to a path.
+	- Making it a scene and not a resource lets me physically attach it to a Path3D as a PathFollower3D, which can then be placed anywhere along a path instead of at an endpoint. 
+	- Making it a scene also lets me attach the movers I want to be able to go through it directly through an export variable. I also have export variables on the component resources, but making it a scene lets me actually reference the mover's scene in the export variable rather than as its NodePath which is just how the resource can find the follower in the scene tree. 
+		- Kinda complicated but making it a scene just simplifies the effect
+- The gate would kill movement for any mover not allowed through and not effect the mover that is allowed to pass.
+	- Gate could also make the follower bounce off or something. More of a juice thing, but either way does something to make sure the mover doesn't pass through.
+#### Path Morphing(PuzzleEffect)
+- I have most of an idea of how to achieve this effect, but there are some things I know I need, but don't have a clear understanding of how I can do it at the moment. I have an inkling but not much more.
+- Something has to determine the behavior of how the paths morph around each other. 
+	- If that movement is random, there needs to be some kind of algorithm that knows the locations of the paths and moves the paths in semi-random ways.
+	- If the paths were to move in a predictable way, there would need to be some kind of (probably) parameterized function to move the points around. My calc 3 knowledge makes me think this but I may be wrong. I'm sure there's math on how you can do the 3D representation of a tesseract.
+- There are some commonalities on how either of these work
+	- The location and orientation of paths needs to be known, which can most likely be accomplished through the endpoints of the paths.
+	- This would be indexing all of the endpoints of paths and what endpoints intersect
+	- Problem with endpoints is that with the PuzzlePaths of the puzzle, they have a base physical location in space and then the actual line is defined by the Curve3D attached to it, which is just two points in the local space of the Path, with one point always being at (0,0,0) which is the same as the base physical location of the path. I'm not sure if any code relies on that point staying at (0,0,0), so I either have to keep a point at (0,0,0) and move the base location of the path as well as the other point at the same time, which sounds like a pain of math, orrrrrrrr I could keep the paths position stationary and just move the path endpoints of the curve separately, in context of the whole puzzle space.
+	- Either way, kind of a lot, but I am confident I could figure out either of those systems. It's just they're both complicated and feel weird to do.
 ### Week 6 Goals
 - Implement new mechanics and refactor other ones to new mechanics
 - More 3D asset creation
