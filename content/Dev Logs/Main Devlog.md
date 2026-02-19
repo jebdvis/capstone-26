@@ -2,6 +2,49 @@
 title: Main Devlog
 ---
 # Week 6
+## February 18, 2026
+### Week 6 Progress Report
+#### Week 5 Goals
+- Explore other mechanics that can flesh out one of the possible branches of difficulty the base mechanics of the game can take on
+	- I want to get wacky with it, really letting the themes of the game come through and integrate with the narrative
+- Developing the rough form of the narrative to help inform puzzle progression and other mechanics
+- More 3D asset generation
+
+Definitely didn't get the 3D model generation I wanted to get done, butI'm happy with the other ability work and tweaks that I made. I'm starting to feel like the stuff I have isn't just a pile of things, even if it hasn't been a pile of things from the start, just things that couldn't go together yet. I feel like I've got a good motivation to work after I've got these new mechanics down, so I'm excited to get the puzzles feeling better and putting things together.
+### 2D Assets
+Created a more full 2D scene for the game. Definitely not how I want it to look in final, but a better feel for how it'll be in the game. Used a concept for made a few weeks ago for how the layout is.
+![[Screen Recording 2026-02-18 at 11.12.16 PM.mov]]
+### Newwwwww Portals
+I worked on the portals yet again. After testing and getting feedback on portals, they were just not it, so they were changed to something that feels better and has more opportunities to matter in terms of gameplay. The basic idea is that the portals still teleport like normal, but to make a mover teleport, the mover need to be sitting in a portal and then the portal pairs have to line up visually. Maybe a bit confusing in words, just look at the video and it'll make sense(maybe). Definitely some fun juice options for this.
+![[Screen Recording 2026-02-18 at 11.14.38 PM.mov]]
+The portals work by looking at where the portals are in the camera screen space and just checking if they are close to each other, then teleporting the mover if they are close.
+### Control Tweaks
+I changed up the controls a bit to make them feel a bit better. I kept how the rotation works using the joysticks, and added some capability of finer movement. Before, the rotation speed of the puzzle was either nothing or full speed, which didn't feel great, especially with a game where you kinda need some fine control of movement. Pretty much just makes it easier to do finer movement with the current controls. Not a huge thing, but I think it's overall a great improvement for the game.
+### Morph Ability cont. 2
+After yesterdays advancements, there were still some bugs with the paths moving, and the meshes didn't line up with the paths like they need to. The main bugs of the ability were with the bounds in which the points were allowed to move;  where in space and how far from their original location. Those were pretty easy to fix up after doing some testing on some logic in the code.
+
+The other bigger unresolved issue was that the meshes were not lining up with the paths. It looked kinda cool but it wasn't anything that made sense. You can also see how the paths were acting weird in the video below.
+![[Screen Recording 2026-02-17 at 9.05.00 PM.mov]]
+I had to change how I drew the path mesh, which wasn't too big of a hassle, but I wish I had just done it earlier cause I wanted to do it this way I did it not, but I was too lazy to do it earlier. After fixing the mesh and path behavior issues, it feels pretty good, even with a puzzle not designed for it.
+![[Screen Recording 2026-02-18 at 11.18.31 PM.mov]]
+## February 17, 2026
+### Morph Ability cont.
+Now that I could collect the points I wanted to move, I had to figure a way out how to move those said points. It was kinda of annoying cause of how Path3Ds and Curve3Ds work in Godot; the points inside of the curve that is stored on the paths are just really weird to access since you have to know the index of the points to access them since you can't just get the array of points on the curve. I'm constantly flipping the points in the curve arrays to make sure that the paths are pointing downwards, so I need to know when the points are being flipped, which I just tracked through the point tracking dictionary. The dictionary that stores all the points eventually became a dictionary of arrays that were full of dictionaries that had arrays inside of them. A very optimized system of variables. Anyways, it let me track all of the necessary information. 
+
+To move the points, I used Godot's built in Tween system, which is basically just allows interpolation of any property or property through method argument, which is the one I used. I have an "engine" that knows how many points are moving at once and caps it at a certain number. It randomly chooses points from the dictionary of points that are stored and sets a new destination for that point in space with some bounds. I want to make the lines not overlap as they move, but that's not set up currently. A Tween is created for each point that needs to be moved, and that tween uses a method that takes the point in as input, which then the method interpolates that original point to the new point over time, while also looking at the dictionary to update the separate points on the paths that are connected to the currently moving point.
+## February 16, 2026
+### Morph Ability
+Made the ability resource for the morph ability that can be applied to the puzzles. Decided to just have the points of the path move randomly for now instead of having any specific movement of the paths, like in some kind of tesseract. Working on this, I made a system to collect the points of the puzzle paths and also collect the separate paths that intersect at those points. Wanted to get started on this before it was too late since I knew this one was gonna be a bit complex to make. 
+## February 15, 2026
+### Work Cont.
+Fixed the rest of the mover code that was supposed to determine where movers would go at intersections. It doesn't account for if there's an effect at an intersection, so if a path has an effect at a point, then the mover code wont tell the effect its on it if its at the intersection but on a different path. I don't have any point effects at intersections right now or any plans to add any that need to be, so it's not the end of the world. Can also just check for movers through the path or effect if I need to.
+## February 13, 2026
+### Reworking Code That Moves Movers
+There have been known bugs with the movers' code for a while now, but it hasn't been too much of an issue, but with the new planned mechanics, I can foresee the bugs getting in the way, so I want to fix them now while I'm not also thinking of fixing them specifically in context of the mechanic I'm trying to add. When movers are at intersections, the logic of what path they switched to was a bit messed up, making the movers lock up sometimes or just acting in unpredictable ways at times it would be nice to know how they would behave. There was some logic that I had written that didn't really make since, but I knew what I could replace it with to have better behavior of the movers.
+
+There's still code that is supposed to keep the movers separated on tracks, but I think that fixing the unpredictability of the movers could help with that. There's also probably some edge cases I haven't recognized yet that could help fix that function.
+### New Mechanic Progress
+I started work on the mover specific gates I can place on the puzzles. They're pretty simple, just a thing placed on the puzzle path and has a single mover assigned to be able to go through. There isn't any visual indicator for what mover can go through currently, though I'm going to assign their meshes the same color right now. Definitely want some other more stylized visual to show give indication of relation.
 ## February 12, 2026
 ### New Mechanic Technical Plan
 Wrote down how I think they can be implemented into the current structure of the code to help me make them more smoothly, hopefully everything makes enough sense from my mind palace.
