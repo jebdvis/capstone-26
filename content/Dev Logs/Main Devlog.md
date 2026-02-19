@@ -1,6 +1,15 @@
 ---
 title: Main Devlog
 ---
+# Week 7
+## February 19, 2026
+### Week 6 Progress Report
+- Refine Mechanics
+- Level Progression System
+	- How I can load 2D and 3D puzzles
+- Player Interaction on Items
+	- Would be pretty easy and good to test level progression with
+- Sounds/Music start
 # Week 6
 ## February 18, 2026
 ### Week 6 Progress Report
