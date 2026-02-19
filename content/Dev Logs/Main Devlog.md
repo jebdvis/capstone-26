@@ -3,7 +3,7 @@ title: Main Devlog
 ---
 # Week 7
 ## February 19, 2026
-### Week 6 Progress Report
+### Week 7 Goals
 - Refine Mechanics
 - Level Progression System
 	- How I can load 2D and 3D puzzles
