@@ -3,6 +3,29 @@ title: Main Devlog
 ---
 # Week 7
 ## February 27, 2026
+### UX/UH Testing 2
+- Having progression system done, I really want to look at the sequentialness of the puzzles
+	- How they work going after one another
+	- Difficulty Progression
+- I can also more grasp what the time to complete will look like based on how fast people are able to finish puzzles
+	- I still don't have a great grasp on the difficulty of the puzzles, especially after changing mechanics up after last test period
+### Week 8 Goals
+- Testinggggggggggggg
+- More Sound
+- Mechanic Refinement
+- Refining Visuals of Test Chamber
+### Week 7 Progress Report
+#### Week 7 Goals
+- Refine Mechanics
+- Level Progression System
+	- How I can load 2D and 3D puzzles
+- Player Interaction on Items
+	- Would be pretty easy and good to test level progression with
+- Sounds/Music start
+
+I'm happy with the progression system for the levels finally being in place, it really makes it all feel like it's more cohesive. It's also great for me, cause it was something I was dreading doing. I don't really like pulling systems together like that, and I know it's necessary, but I just like making the systems more. Being something I didn't want to do, it means that I feel like I've hoisted myself up to the next tier of making the game. Pulling everything together was something I was unsure of, but now I've gotten over that, there are things I can go back to for the game that I know how to do and how to iterate on. I do wish I had spent other time on things this week, especially on the puzzle effects, but this was very necessary and it just happened to take up most of the time. I chose to do some sound stuff just to get it started, since I hadn't really had much for it yet. Now it's started and another thing for me to work on if I need a break from code and such.
+### Audio
+I messed around today to try out some sounds I could use for the game. I made a lil synth in Ableton that sounds a bit dark and crunchy, and I think it would be good as an ambient drone for when the game starts up, maybe just going back and forth between two notes. I think I'll have a fairly basic start screen that can be used to load games and what not, and I don't think it'll have much music; maybe just that kinda drone synth. For sounds in game, I was gonna have some ambient sounds of the test chamber: maybe some thing AC fan noise, noises for the terminal, stuff like that. I also wanna have kinda a metallic scraping noise for when the movers move along the path. I was messing around with some procedural audio generation in Godot, but it's a bit funky, and IDK if it's time well spent to try and find a way to generate the waveform of metal scraping. There's some mix of sine waves to do that, and I ain't the one who's gonna figure that out. I think if I can find some resources on how to match those waveforms in code, or able to generate a waveform off of an inharmonic spectrum of that sound. Most stuff that's fairly easy to generate are basic musical instrument sounds, of course able to get very basic synth sounds. An alternative to straight generative audio is using premade sounds, or making my own and mixing them to be more dynamic in engine. This is probably the best way to do the movers on the puzzles, but I would love to get the generative audio working. It's cool in concept, but I haven't been able to grasp it fully.
 ### Controllers and State Machine Finish
 I've got the whole progression state machine system working now, being able to go from puzzle to puzzle as you progress the game. Nothing happens when you run out of puzzles at the moment, but I have room for where I know that will go with the state machines. Having all of these different things hooking up that weren't before did have its challenges, certainly in parts where it was cyclically doing things or just not doing what I wanted it to. A lot of those problems were just simple logic problems, which were easy to solve, but tracing to the point where things were failing was definitely tedious. I was worried that I'd have to kind of hard code things to make them work correctly, but I think what I have feels good structure wise, it's just that some things are connected in a few lines of signals(eg. The 3D puzzle fires a finish signal to the controller, the controller fires to the state machine, and the state machine fire to the interactable the player has to interact to start the puzzle). It does make sense to have this chain of signals I think, since all these different things need to do things when these signals are fired, and also hooking them all up to the same finish signal would be a bit weird in accessing all of those things, when the interactable doesn't really need to know about the puzzle at all; it just needs that signal to make it not interactable.
 ![[progressionsystemtest.mp4]]
