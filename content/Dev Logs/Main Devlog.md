@@ -1,6 +1,13 @@
 ---
 title: Main Devlog
 ---
+# Week 9
+## Week 9 Goals
+- Work on test feedback
+	- Primarily visual distinction and tutorialization
+- Tweaking mechanics as they are rearranged
+	- I don't think there will be other mechanics added in
+- Adding in more 3D stuff into level; might be parallel to working on visual distinction
 # Week 8
 ## March 4
 ### Week 8 Progress Report
