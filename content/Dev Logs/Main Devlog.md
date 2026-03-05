@@ -1,6 +1,197 @@
 ---
 title: Main Devlog
 ---
+# Week 8
+## March 4
+### Week 8 Progress Report
+#### Week 8 Goals
+- Testinggggggggggggg
+- More Sound
+- Mechanic Refinement
+- Refining Visuals of Test Chamber
+
+I don't think all of my goals for week 8 were necessarily met because of how many bugs I had to fix adding puzzles to this new progression state machine, but I was able to hit an acceptable amount of them as I progressed. I think results from testing also put me in a pretty good spot, so I'm not very worried at all about what I missed. There was certainly mechanic refinement and some refining of visuals in the test chamber as I had to fix bugs and changed some visual elements to work in the new area. What was missed in goals, though, was mentioned in feedback from players. I got great feedback on what people want to see for visual refinement in the game, how I can move around mechanics to make the game more understandable, and I even got feedback on how to implement the sound I want the puzzle movers to make as they move around the puzzle. I definitely put in the time I wanted to this week, but I do wish some other things were done. I am very happy still with the amount of bugs that were fixed that most likely don't need to be worried about anymore, and I'm very happy with the feedback I got from the many hours of testing I did. I think the project is currently in a good spot, and I've got a lot of great feedback on how I can keep continuing on the many aspects of the game.
+### Testing
+Below are the rough notes that I took when observing these individuals while playtesting the game, as well as through discussion afterwards.
+#### First Player(Plays Video Games; Not Game Designer)
+
+First 2d ok
+
+First 3d shouldn’t have two goals perhaps 
+
+Couldn’t press e on the things
+
+Gates are hard to see; and colors on followers hard to see; second puzzle
+
+Second puzzle seems easier
+
+Trying to keep on in the solve point and move the other one
+
+Trouble with depth perception but feels its part of challenge(hard part)
+
+Only got to play through first 2 sets of puzzles
+
+#### Second Player(Danny)
+
+Grid in background makes paths hard to see
+
+Overall needs better visual clarity
+
+Feedback on how to make sound: either waveform analysis or just do more dynamic sound
+
+Pulled out a glass jug and metal pipe to make sound of ball moving
+
+Some way to reverse morphing?
+
+
+#### Third Player(Game Developer)
+
+Balls tiny
+
+Solved puzzle without trying (balls fell into same solve point)
+
+Nodes should disconnect
+
+Mostly visual problems
+
+Indicating solve point with visuals
+
+Tutorial puzzle 
+
+Code making followers not stay together that’s broken has cool quantum ball teleport feel
+
+Wants more 3d puzzles in between 2d puzzles
+
+Gets “surprisingly intuitive”
+
+Likes split puzzles first to understand mechanics
+
+Physics feels a bit slippy, wants to balance ball more
+
+  
+
+#### Fourth Player(Game Developer)
+
+“I like dis”  - after opening the first 3d puzzles
+
+Rotation feels slow
+
+Balls hard to see
+
+Depth test change on for material
+
+Light in the puzzle confusing(on second puzzle)
+
+Wants to see what gate does on second puzzle
+
+Not thinking through
+
+Second puzzle not difficult increase
+
+Focused on pink ball mostly
+
+Just one ball for first puzzle, teach control scheme then do puzzles
+
+First split puzzle easier than gate puzzle
+
+Hardest part is controls, losing control on ball faster
+
+Likes idea of 4 th 3d puzzles, again wants more control scheme teaching 
+
+Starting to grasp controls at puzzle 4
+
+Visual updates will be really good
+
+Wants to see different lighting on puzzle and different distinction
+
+On morph puzzle ball doesn’t move when it should (known bug of ball not moving when on path that is moving)
+
+Portal not working when morphed away?
+
+Likes weirdness
+
+Likes play with perspective(portals)
+
+Wants more aesthetics(upping polish will make things feel better)
+
+Readjust early puzzles around to get better, maybe split first.
+
+Likes flow going back and forth one 2d then one 3d
+
+Rotation tied to how messed up the morph gets
+
+Timer on last puzzle?
+
+Likes ending on 3d puzzle and not 2d
+#### Fifth Player(Plays Some Games; Mostly The Sims and Stardew Valley)
+
+Balls are small
+
+“I don’t know how to get him over there”
+
+Doesn’t like balls don’t lock
+
+Visual indication for mover in solve point
+
+“I’m gonna kill myself”
+
+Prefers 2d puzzle(“like those iPad games”)
+
+Hard to pay attention to 2 balls at once
+
+Wants first puzzle to be just one ball to learn controls better “would make me not want to shoot myself dead”
+
+Not many times when it doesn’t move the way she thinks it would
+
+“I’m gonna shoot myself”
+
+“I don’t want to go back to the crystal room”
+
+“I hate my life”
+
+“Your game doesn’t suck but…… I don’t like this puzzle”- on 4th 3d puzzle
+
+Confused on explaining of portals; need to figure out good way of portals
+
+Really loves 2d puzzles “like those iPhone games you get on instagram reels”
+
+“If you meet someone who likes iPhone games, they’re not gonna like this”
+
+Didn’t like ball not moving when morphing
+
+Doesn’t explicitly say she wants more visual clarity, but definitely wants more visual distinctions
+
+Last 3d puzzle “is not normal”
+
+#### Summary and Game Future
+Overall, felt like I got some very good feedback on this run of tests. I had the same amount of testers this time around, but I got to spend a lot more time with testers this time around and overall just got better quality feedback. 2/5 testers were apart of testing last round, though they also have only experienced my game in that last test round. The other 3 have been adjacent to the game, having some minor testing in the past, but haven't experienced all 3 of 2D, 3D, and visuals. Every one I tested with plays games to some extent, though at different levels and different kinds of games. I'd say most of the players play games that are adjacent to this game project, though most of them also don't play mostly puzzle indie games. 
+
+A lot of the feedback I got from the 5 playtesters were fairly similar, which I think is good but also scary. I want to make sure I have all the things worked out in the game, but having very similar feedback from everyone, that's also things I know I need to do, makes me worried something was overlooked, or everyone was too kind about it. Realistically, probably a good thing and not something I should worry about too much. The biggest parts of feedback, I'd say, between the group had to do with the puzzle ordering and the visual indication/fidelity of the 3D puzzles. 
+
+For puzzle ordering, most of the consistent feedback was in the beginning and end of the puzzle progression. Everyone felt that the first puzzle should be a puzzle that's used to teach the control scheme of the game, not necessarily introducing anything about moving multiple movers around the puzzle. This feedback either came as direct communication of wanting more tutorial puzzle as well as multiple testers saying they wanted the first puzzle to only have one mover. One person who told me the first puzzle should just be one mover had told me recently that a puzzle with one mover already feels like a puzzle, even if there isn't a balance of movement between two of them. From feedback for a tutorial puzzle, it seems players either want a singular path they have to rotate to get a mover from one end to the other or a simple cube shaped puzzle that gets players used to rotating a puzzle how they want to rotate(this matches more with how the puzzles are already cube shaped). All players found it hard to get used to the control scheme while also having to learn how to balance the movement of two movers on the first puzzle. Multiple expressed how they only got used to the controls a few puzzles in. As for the end of puzzle progression, a few players had expressed how they either felt how the end was very hard, or needed to be crazier(not necessarily harder). Most of the puzzle reordering was how people wanted more of a ease in to the puzzle mechanics, from a tutorial of the puzzle controller. Some also felt that the gates should come after the puzzles are split, but feedback suggested that the split puzzles, with gates and portals was a good difficulty level for where it was placed in progression. Definitely happy with this feedback, since I was worried about how I could tutorialze the beginning of the game. Having consistent feedback on that is reassuring on how I can do that.
+
+The other large consensus of feedback was on the visual aspects of the game(also extends to other juice elements, but for now just visuals of puzzle matter). I've been testing the 3D puzzles in a scene that was basically a blank Godot world, with just some fog to add depth perception; no shaders or models around the puzzle. This new main scene adds a lot: those shaders and 3D models, as well as more dynamic lighting. It doesn't work great right now. Before testing, I knew there were some problems with seeing the rails, so increased their size a bit, which I do think helped, but a lot of other issues arose, mostly with lighting and the shader. With increasing the rail size, I didn't increase the puzzle mover size, which made the mover ball kind of disappear into the rails when at the back of the puzzle. Had to tell people where the mover was multiple times when testing. This was one of the visual issues that I didn't know about, which is good. There were also issues in the color coding of things. The gates I added were color coded to the puzzle mover sphere colors and the portals are the exact cube shape as the solve points of the puzzle, just gray, which didn't show up very well. Most of this is due to lighting, though I do want to have other physical indicators in the models to show what things are. The lighting of the puzzle area made all the colors really dull and hard to tell apart, especially at distance. When the portals were introduced, the yellow light inside of the puzzle cube just made the portals look like solve points which was super confusing. 
+
+That light inside of the puzzle also causes other problems as well. This light makes the paths towards the back of the puzzle very bright and the ones closer are in shadow. I'm surprised I didn't get more complaints about that, it really tripped me up sitting off to the side of the screen. The whole depth perception was off for me, but some people did complain about it. I think the big issue with that, is that in basically any visuals, as well as with real life in fog, things get darker/loose saturation as they become further, but that's the opposite with this central lighting feature in the puzzle chamber. Definitely needs to be a relighting of the whole area, making sure things are visible. Will also do this with modeling and texturing of the objects on the puzzle.
+
+Honestly, this felt like most of the feedback, was between these two. Everyone had great response to 3D and 2D puzzles(except for player 5 who I think the game didn't fully match up with what they usually play). I had I think 3 or maybe 4 of the players tell me they thought the mechanics felt good and that bringing the visual distinction up, as well as other juice factors, would bring the game to the next level. I definitely want to keep exploring how I can play with the mechanics to make them better, but having consistently good response to the puzzles is very pleasing. I definitely want to start working on the visual and juice of the game more, as we approach the last few weeks of capstone and this makes me feel great about moving more towards that. I'm definitely not going to stop working on mechanics at all, but those systems and implementations seem fairly concrete at the moment. Very happy with this feedback, and I think there's much to work on with what I've got. There wasn't anything that made me worried about having to trash parts of my game and there was much constructiveness in the feedback, which will be great for launching forward.
+
+### Before Testing
+Had to do some more fixes on my testing material just to make sure things would go smoothly, I hadn't had the time to fully go through everything since I had to solve all the puzzles to test everything in order. To get through things to test more easily, I added a debug tool that lets me send the puzzle finished signal from the editor, so if I needed to skip a puzzle, I could hit that and get through.
+
+I also had to finish up my 2D test puzzles, cause I hadn't finished them the day before. It took me maybe an 30 min to an hour to get together some 2D puzzles together that felt like a good progression. I still haven't decided how I want to end the game, so for the last puzzle I made it hard instead of just completely impossible. Even if I eventually go for the end puzzle being impossible, it'll still give me more of a scale to test with. The last puzzle I had set up was also before the last 3D puzzle, so having it impossible to complete wouldn't be very useful for testing the progression of the mechanics.
+## March 3
+### Moreeeeeeeee Tessssttttt PReppppppp
+Making some more puzzles to test today. Naturally, integrating my puzzles together, there are some bugs with things that show up as I go along, mostly in the puzzle effects. Fixing the gates the other day was part of that process and there are even more things to fix today! The portals were having a weird issue where they weren't teleporting correctly and was a bug that I had put off to fix later, which was (lucky for me) today. Like many bugs that you test and test and test and can't find the solution to forever, the solution to this bug was I was setting a variable on the path the mover is teleporting to, not the one it was teleporting from. So the fix was just removing a variable reference. Took so long to figure that out. 
+
+I've also started integrating the morph effect with other effects, like puzzles and gates, which is running into a few more bugs. Gates, portals, and puzzle solve points are all represented physically on the puzzle, but only gates and solve points are PathFollow3Ds and portals are just meshes that the path with the effect spawn in. The problem with the PathFollow3D inherited nodes is that when the paths morph, the followers' progress is kept constant and their progress ratio is altered as the path length changes. So when I have a gate at the half way mark of a 1 meter long path, when that path changes length, the gate stays at .5 meters no matter how long the path is. I want the ratio to stay constant. Fairly easy fix in tracking what the original ratio is, then changing it to the original value if the ratio is changed. For the portal, the mesh is spawned in at an end point of the path it's on, and when the paths morph, the portal stays in that original position. This just means the mesh has to have its position changed as the path morphs, following that endpoint.
+
+Of course the morph ability also has some more issues once actually in the game scene. The scene I've been testing in has the puzzle centered around the origin, but in the game scene, the puzzle is about 9 units away from the origin of the world. This messed things up since most of the code I wrote for the morph effect was working in positions relative to the world origin and not the puzzle container. This made the paths morph out of the visible area of the playspace, definitely not an intended effect. Once I made everything more consistent in positioning, that fixed the paths moving outside the bounds I wanted it to act inside of. Once that positioning was fixed, there was still an issue with how I indexed the path points, so when the puzzles morphed, the intersection points didn't move together. That was fixable by doing the position indexing not through localization functions, and just adding positions manually to make them "local".
+## March 2
+### Gates!
+Finally got gates working. They are supposed to only let in the allowed puzzle mover. I was trying to set it up so the gate just applied an inverse square law force to the mover as it got closer to it. This was supposed to make it stop before the mover got to the gate, and kinda bounce away from it. I had the code set up for it, but it seemingly didn't work. I had tried to debug it for a while and couldn't figure out what was going wrong, but luckily had a realization yesterday that the code of the gates was running before the code that determined the acceleration of the movers, so the acceleration change from the gate code was basically being ignored. I did maybe not great of a fix, but it works. I have code that runs path effects after the movers' gravity code is ran, mainly for the time dilation paths, but in that code I now also check if there is a gate on the path, and if there is, I just run the code there. There's still a slight problem with the gates, but I think it could be fixed by fixing the code that keeps the movers separated. Movers are supposed to exert that same inverse square law force on each other when they get close, sometimes they like to not and will move on top of each other. When they do this while going through the path, there's clearly some force that happens, because it ends up pushing the movers through the gate with that force. Kinda annoying, but I think I can fix the mover code, them not staying apart has been kind of a consistent issue for me.
+### Test Prep
+I'm makin puzzles. To test them. I started on the 3D puzzles, making the first two puzzles in the sequence of 3D puzzles. I'm trying to follow the beat structure I had set up a while ago with what mechanics I have. I'm mostly testing the sequentialness of the mechanics, but I also do want to know how these new mechanics feel. Now that I have things in the full shader part of the game, I also want to know about how things work visually with the puzzles. I don't have visuals finalized yet, but there's definitely insights I can get on how things look with the shader.
 # Week 7
 ## February 27, 2026
 ### UX/UH Testing 2
