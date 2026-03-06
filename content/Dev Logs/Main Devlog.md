@@ -2,7 +2,7 @@
 title: Main Devlog
 ---
 # Week 9
-## Week 9 Goals
+## Week 9  Goals
 - Work on test feedback
 	- Primarily visual distinction and tutorialization
 - Tweaking mechanics as they are rearranged
