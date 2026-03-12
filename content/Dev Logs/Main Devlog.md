@@ -1,6 +1,22 @@
 ---
 title: Main Devlog
 ---
+# Week 10
+## March 12, 2026
+### Week 10/11 Goals
+- Testing at all steps
+- Full controller implementation
+	- Big thing here is the 2D stuff with controller. I've got a good idea of how the puzzles will work in 2D after talking with some people on what they think would make this very mouse heavy system work with a controller
+- Finish Up 3D and 2D Assets
+- Dialogue system setups; would love to finish this if I have the time
+	- Probably JSON based
+	- Doesn't need to be too complicated; it's just one way text to player with TTS
+- Write dialogue for 2D stuff
+- Get sounds mostly implemented
+- Make transition between states more fluid
+	- Right now starting and finishing puzzles is very sudden
+- Planning out juice and other Audio/Visual elements I want to add in to help match this world and environment to the narrative beats I have formed.
+	- Also really want to get a good amount done on this, but lower on priority list
 # Week 9
 ## March 11, 2026
 ### Week 9 Progress Report
