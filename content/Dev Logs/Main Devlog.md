@@ -2,6 +2,68 @@
 title: Main Devlog
 ---
 # Week 9
+## March 11, 2026
+### Week 9 Progress Report
+#### Week 9  Goals
+- Work on test feedback
+	- Primarily visual distinction and tutorialization
+- Tweaking mechanics as they are rearranged
+	- I don't think there will be other mechanics added in
+- Adding in more 3D stuff into level; might be parallel to working on visual distinction
+
+I think I got a good amount of things done for this week. The visuals are definitely a great addition into the game, making it feel more complete, as well as giving a lot more clarity to the puzzles themselves. I think that the test feedback was implemented well, though I do wish I had more time to test those things that were added in. I got some feedback on these visual improvements, but they were largely from people just seeing the game as I worked on the buggy mess it made as I added the new meshes in. I spent a good amount of time on it this week, but there were a few times that I was just stuck on things for an uncomfortably long amount of time.  This is kinda just a side effect I've mentioned before of bringing in new things to already created systems. Luckily I have a brilliant mind(ruined by higher education) that's able to write a very larger majority of my code without generative AI, and can understand all of it since if I do need to get code from some other source, I make sure to understand whatever I put into my game.(I'm not even sure if there's really any code written by AI in the game, it's largely been unhelpful with things, maybe giving me some kind of direction in where I need things. Good ol Godot forums are always great though.)
+### Mentor Review
+#### Danny Rankin
+I went back to Danny's office hours to get some more feedback after the visual changes I made for everything and get any other feedback he had to offer from his experience. Got some great reinforcement on feedback I've gotten from him and others, being that he thinks this is a good technical proof; there's a box around everything and now I need to fill it up. He could tell most of the time has been spent on mechanics, which he thinks is good, but warned me about underestimating how much time these other things will take. Now that I'm in this spot of having mechanics put up, I'm definitely going into full swing of filling the box up with juice, more visuals, dialogue, and what not. With only a few weeks left, he recommended getting simple, but effective things together to help telegraph this necessary things I want to get across; don't hold back on things but definitely do not overdo. He knows I'm going to have dialogue added in for the final game, and also warned me those systems can be finicky, so don't wait till last second on that. Also, in testing he mentioned how the lines on the back wall interrupted the "lock in" of the game. With visual improvements, he thinks it's much better, but would still like to see something that would make the lines disappear when the player is solving the puzzle. The stationary lines on the back wall just clash too much with the moving lines of the puzzle.
+
+#### Nathan Keyt
+Nathan, like Danny, wants to see more of that box filled in. They're very interested in what things can be done to push the points of things falling apart; the whole anxiety thing of the game. They like the structure of the technical side of the puzzles as well, they just think that they'll benefit even more with these other details that fit into this narrative I'm creating. They had some problems with the controls, not really grasping them till part way through the testing. They thought that having a puzzle to just focus on the controls would be very beneficial for players, not having to learn both puzzle mechanics and a new control scheme. Luckily, they do think that the controls become intuitive after use, the problem is just there isn't enough focus on that new skill. They were big proponent of restructuring how the mechanics are introduced, mostly thinking that the split puzzles were easier than the connected puzzles. I'll definitely want to play around with this and see how that different introduction of mechanics works for players.
+
+### Mechanic Reorganizing
+I reorganized the puzzles to how people felt the difficulty increase is better. It luckily still works with the narrative beats I have set, which is nice. I've also created a simple tutorial puzzle to help people get used to the controls first. It's a basic single track/single mover puzzle. The singular track follows a similar cube shape like the other puzzles, but it doesn't have any branches on it. Just a track you can either make progress on or lose progress on. Haven't had time to test these changes out, but I plan on doing this in the upcoming days.
+### Implementing Models
+Man that sucked. Was easy to make gates and movers work, but getting the solve points and portals to align was way harder than I thought. Rotating them to face the correct way based on the points of the paths was just strangely hard. It legitimately took me just 2 hours to figure it out. It was just unnecessarily hard. Then something I thought I had done fixed it? IDK. But once I got it working for the solve points it was fairly easy to get it working on the puzzles. Since the portal meshes are instantiated through code, that was kinda annoying, but I didn't have to figure out how to align the meshes, I just had to make sure the meshes were set up to work with the code I had already written.
+
+I'm here from the future to say that the code to keep the solve points and portals oriented correctly is actually not fixed. The models do face the right way, but they rotate around the axis that is made up by the path. I couldn't see this happening with the portal meshes since they are circular and them rotating isn't visible with their radialness. I had a fix that sometimes worked for the solve points, which are cubes, but I couldn't figure out why they sometimes worked. I currently just have them rotating, since I don't think it's necessarily out of theme for them to be rotating weirdly. They aren't physically connected to the paths so it kinda makes sense. Might keep it like that for now, or make the meshes radially symmetrical. I spent another hour or so trying to figure out how to get them to not rotate and I still could not make progress. Pretty annoying.
+
+I've also got the color coding working on everything, so when you set the color of the movers' emission texture, it also sets that same emission to the corresponding gate.
+
+![[Screen Recording 2026-03-11 at 10.34.40 PM-1-1.mov]]
+## March 10, 2026
+### Next Steps
+I'm going to get those models implemented next, for sure. For other improvements, I'm going to try out tutorializing the controls. I'm going to try out a few different puzzles for the tutorials; they'll all have one mover and then I'm going to play around with the form of the paths on the puzzle. Originally I was thinking of just having a single track where the player has to move the mover from one side to the other, but that might be jarring with the rest of the game being puzzles in cube shapes. So I'm also going to try a puzzle thats a simple cube shape puzzle, as well as a mix of both: a cube shaped puzzle but its just a singular non-branching track. I'm then going to reorder the mechanic introduction of the puzzles, but that shouldn't need any editing to the puzzles themselves. That should be a good point to test again and compare with some of the testers from last week.
+### Implementing Improvements
+Mostly worked on the modeling of the different objects that will represent the different parts of the puzzle. They currently aren't hooked up to the puzzle parts yet, but I've figured out the scaling, so attaching these new meshes to the mesh nodes I already have in the game shouldn't be too bad. The orientation of some of them matter, so I'll probably have to check the orientation of the path to match the correct orientation. Although I do know that the node that all of these extend from has parameters to lock rotation in certain axes, so that might work for me. I'll have to check that against the morphing ability too, to see if that rotation lock would still work when the puzzle paths move around. These are definitely still prototypes, but I'm hoping the shape and emission shaders they have will work well. Everything should have a distinct enough shape and emission shader pattern on them to help players know what is what, but that's what testing is for, of course.
+
+Next step is to get them attached and test out how the colors/shapes work; if they work in the new lighting and what not. I am trying out a new shader, since the old one actually didn't allow for yellow at all, it just dithered green and red together to make a weird color. Since I'm using yellow as a color and it's also a primary color(so dithering to make it doesn't really make yellow), I want to try out yellow being included in the color palette.
+
+New Shader:
+![[Screenshot 2026-03-11 at 10.30.49 PM.png]]
+![[Screenshot 2026-03-11 at 10.31.29 PM.png]]
+### More Improvements(Plan)
+Before I keep going with these improvements, I kinda want to condense down what I have from testing to have more concrete goals. I know what people have problems with, and I want to identify those specific things, identify possible solutions that people presented, and also see what other solutions are at hand for those things.
+
+#### Gates
+Gates are hard to see, both in their shape and color. Some people also thought they were solve points on the puzzle sometimes. Simple fix would be make bigger and maybe give them emission effects, but I do think that all these different objects in the game should have different silhouettes/3D models. Big thing these need to communicate visually is the mover that can go through them, which is currently done by color. I think that color is fine(maybe look at color blind options), but I don't want it to be the color of the whole thing. Maybe the mover has some stripes of glowing color on it and the corresponding gate has the same color stripe on it. Would probably be an emission texture.
+
+#### Movers
+Movers are hard to see when towards the back of the puzzle. Probably could be bigger, but I could also just make them a bit bigger as they are towards the back of the puzzle. Just increase their scale by a bit through code checking how far back they are on the puzzle. I think that giving them the color coding stripes for the gates would also be helpful, but some puzzles don't have gates. Unless they just had a white stripe on them when there weren't any gates.
+
+#### Solve Points
+Again, I want them to not be a basic box cause it looks bad, and then it'll have more visual distinction from everything else. Multiple players also wanted the solve points to give some kind of response if there was a mover inside of it, which definitely makes sense. People were also, in general, getting confused if a ball was in a solve point, especially if there were more things on the puzzle like gates and portals. The only way to really tell if you have a ball in a solve point is if you remember getting one in or if you happen to see the glitch that lets you see through the meshes of the puzzle(another bug I'm not sure how to fix at the moment).
+
+#### Portals
+Really they have the same problems as the other things, but they are also the exact same shape as the solve points and in the old lighting were almost indistinguishable from solve points; really really not good. But they're portals so I think they could have a cool effect on them. Would also probably be good to give them some visual if they have a ball inside of them. Some good juice options for these I think.
+
+#### Puzzle Paths
+I think that I've for the most part solved the problem of depth perception on the paths. With the setup of new lights, the different parts of the puzzle have different lighting on them, which I think helps with distinction on what part of the path is up front and whats towards the back. Definitely want to test with people to see how it feels, but either way I think it's at least a step in the right direction.
+
+![[IMG_1999.jpg]]
+## March 9, 2026
+### Visual Improvements
+Started working on the visual improvements for the 3D parts of the game. By improvements, I mean for distinction between things, just making the game look better for the sake of the game feeling better. The biggest thing that really made the game not look better distinction wise is probably the lighting, so I tried out a new setup of spotlights in the scene to give things more of a depth. In the second image you can also see some other colored objects on the puzzle paths to show the colors coming through a bit better. They are still a bit dark, so I think that I want to make them glow. I also would love for them to be some kind of vertex shader to make a cool effect, or maybe just a particle effect. The objects on the path definitely still need more visual distinction but I think that this lighting change is a good start. I got rid of the light in the center of the puzzle and added a red light just below the bottom right of the view seen below. there was a light already to the top left of this view, so I changed it around a bit. And I kinda lied about getting rid of the light in the middle of the puzzle. There's one there but I changed it a bit and now it has its shadows set to negative, so where it would've cast light before, it casts shadow. I did that to give more shadow on the paths on the back of the puzzle to help with depth perception.
+![[Screenshot 2026-03-10 at 10.48.49 AM.png]]
+![[Screenshot 2026-03-10 at 10.56.45 AM.png]]
 ## Week 9  Goals
 - Work on test feedback
 	- Primarily visual distinction and tutorialization
@@ -113,7 +175,7 @@ Wants to see different lighting on puzzle and different distinction
 
 On morph puzzle ball doesn’t move when it should (known bug of ball not moving when on path that is moving)
 
-Portal not working when morphed away?
+Portal not working when morphed effect?
 
 Likes weirdness
 
