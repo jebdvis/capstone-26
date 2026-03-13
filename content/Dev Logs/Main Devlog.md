@@ -2,7 +2,13 @@
 title: Main Devlog
 ---
 # Week 10
+
 ## March 12, 2026
+### Dialogue Audio
+I've been wanting to do TTS for the dialogue for a while now, but after looking into it, I think that doing recorded voice over that's manipulated will be better. I'll have more control over the tone of everything and then I also don't have to worry about another system failing. I would love for the text to appear as the dialogue audio continues and I think I can still accomplish this with recorded dialogue. I think using a JSON files will still be a good route of action. I can copy the same script that's spoke and then use markers in the JSON files to control how quickly text is revealed or breaks in between text. Might be a bit tedious, but I know systems like this exist, so I'm hoping the only trouble will be having to go through the audio files and correctly getting words to appear along with the audio. I'll have to try it out, but I think I should be able to look at waveform in Ableton and see how long phrases and breaks are. I think as longs as I keep a consistent cadence in mind when recording, that should work pretty well.
+
+I made tha thing. It reads the JSON files and prints text sequentially. I don't have audio to test it with yet, but I think it'll work alright, as long as I transcribe the timing of things correctly. The function just creates a series of tweens for each chunk of phrases or breaks, so it should be pretty easy to create something that lets players click to the next set of phrases on each page.
+![[Screen Recording 2026-03-12 at 9.05.30 PM.mov]]
 ### Week 10/11 Goals
 - Testing at all steps
 - Full controller implementation
