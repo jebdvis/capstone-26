@@ -2,7 +2,107 @@
 title: Main Devlog
 ---
 # Week 10
+## March 17, 2026
+### Tutorialization Side Note From Today
+While writing that first draft, I was thinking about tutorializing the portals. I don't really want to do it through the dialogue, since it's supposed to be an unintended effect of the black hole. Means there needs to be more visual stuff. So how can I make it visually known that you put a ball in one side and then you have to line them up and come out the other side???? IDK. Maybe I make there be an effect that's like something winding up the closer you get the portals visually. They already kind of look like the solve points so I think players might put the balls in them, but we shall see.
+### Audio Visual Stuff I Want To Add(Not Current Priority)
+- Shader around player screen to mimic light distortion of black whole
+	- Probably some particles as well to play with that distortion
+	- I would like this to get more intense over time, but not enough to really mess with the player a whole lot
+- Test Chamber breaking apart as player progresses
+	- Probably mostly breaking up the mesh of the test chamber, maybe like wires hanging from the ceiling. Particles and stuff for sparking
+	- Think I can just make things fall apart when the player is in the 2D terminal/when the shutters are closed
+- Making the 2D puzzle nodes kinda float around in space. Not too much, just giving them some kinda life
+- Black hole visualization in the terminal view
+	- Was going to make a gif of a stylized black hole in Blender and put it below the logo in the terminal screen.
+- Was thinking of making a small window at the top of the room that the player is in that has lights coming through it.
+	- Nothing much but I don't want to focus on it if there's other stuff.
+	- Would just be a rectangular cutout that's just an emissive texture, but I want light to "come through" the window and look like it's refracting off of fog or dust or something in the room.
+## March 16, 2026
+### Dialogue Script - First Draft
+#### Tutorial State
+Hello there! We are so happy of your acquisition to the Mattel-Toyota-Lockheed Martin family!
 
+As part of the MTL family, you will be contributing to only the forefront of advancement of the human condition!
+
+You have been requisitioned to the [Funny Name] Memorial Research & Development Department.
+
+You will be participating in the testing of an exciting new technology. A black hole powered gravity manipulation device!
+
+In testing today, you will use this device's rotation capabilities to solve a series of puzzles.
+
+The puzzles are constructed out of a set of tracks that have a set of spheres that can freely move along them.
+
+You will rotate these puzzles in 3D space to guide the spheres into certain boxes on the puzzle. The box the sphere goes in does not matter.
+
+We will begin with a calibration test. This will be to make sure the device is working correctly and you are able to use it properly.
+
+This first test will be comprised of a single sphere along a twisting, but non branching track.
+
+The device gets quantum entangled when used, so we'll need you to return to the terminal after each test puzzle to reset the device.
+
+You've already done a bit of untangling right after you opened this terminal, so we're sure you'll be great at it!
+
+Now let's get to work! We'll catch up after you visit the terminal next!
+#### State 1
+Wow! You're a natural! We really are lucky to have you in the Mattel-Toyota-Lockheed Martin family!
+
+All the results from the calibration test look great and you're a natural at this gravity manipulation, so let's continue!
+
+We'll be adding a second sphere and more tracks to this next puzzle, but no sweat! We know you've got this! Good luck!
+#### State 2
+You're work is exceptional, please stay forever! HA HA. 
+
+We're going to change up the next puzzle a bit, but with your skills, we know you'll succeed with flying colors!
+
+This next puzzle is going to be split in two parts to test the devices capabilities with multiple objects. 
+
+It's like two puzzles at once. It'll be so fun!
+
+Now get on out there and show us what you've got!
+#### State 3
+You're simply amazing!
+
+We're seeing a bit more entanglement on the device, but nothing we can't tackle together!
+
+We'll keep an eye on the device, and you keep on doing what you're so good at!
+
+We're gonna run another un-split puzzle again and make sure everything's alright. 
+
+We'll make sure to patch up anything that pops up from the increased entanglement, if anything happens at all!
+#### State 4
+Uh oh! Looks like some unexpected stuff popped up on that one! Those spheres were blocked on specific tracks!
+
+Sorry we didn't catch that before our last chat ended. We hope out color coded solution suited the problem well!
+
+The device's entanglement still looks elevated, but we aren't worried after that last test! 
+
+We are going to continue with the puzzles now! We are going to try another split puzzle!
+
+We expect you'll run into these blocked tracks again, but we don't expect anything else to go wrong! You'll do great!
+#### State 5
+Oops! It happened again. Seems like some teleportation points appeared on the puzzle. We didn't expect that!
+
+Seems like the entanglement of the device has gone up a bit as well. We'll try to keep it in check, but who's to say what can happen!
+
+Let's move on to our last test of today's trial. We'll try that last puzzle one more time and call it a day!
+
+Before our last puzzle we, again, want to extend to you our warmest of welcomes to the MTL family. We're so glad you're here!
+
+You're contributions will not go unnoticed! Now let's get this last puzzle under our belt!
+### Dialogue Implemented
+yayyyy it work. Plays dialogue after the 2D puzzle is completed, and lets the player click through the phrase groups.
+![[2026-03-16 15-36-19.mov]]
+## March 15, 2026
+### Dialogue With Audio Test
+Recorded a test snip for dialogue just to prove it works. I'm currently trying to twork on implementing that whole system in line with the 2D puzzles and terminal so I just want to make sure it works before doing all that. Sounds like dog butt, but who cares.
+![[DialogueAudioTest1.mov]]
+### 2D Visuals
+Worked on some UI updating for the 2D puzzles, making things look a bit cleaner, adding space for dialogue stuff, constraining puzzle 2d node movement so they stay only in their box. Green thing is the placeholder cursor and where it says "E To Continue" is just testing the text box for dialogue.
+![[Screenshot 2026-03-16 at 12.02.41 PM.png]]
+## March 13, 2026
+### Controllerizing Everything
+Started to make everything function on controller. The first big thing was making it so you can walk around and interact with a controller, which wasn't too difficult. I had to change the walking code a bit to work with a controller, but it was more about changing where the code is pulling input from and changing some sensitivity in the camera controlling and actual translation in movement. I also implemented a cursor for the 2D puzzles that can grab nodes and move them around. So technically the game is playable on controller now, but there's definitely more things I need to do to make it feel a lot better. Right now when you do the 3D puzzles, you move around since the controls for moving the puzzle and the player are the same. I can fix this by disabling the players controls when the puzzle is loaded, but I also think I want to have a fixed camera the player looks through when they solve the 3D puzzle so they don't load a 3D puzzle and then were at a weird angle and solving the 3D puzzle is weird. I also want to make the 2D puzzle controls a lot better, since moving a cursor with a controller joystick is a bit tedious. I did make a global autoload that anything can access to see if puzzles are loaded. Many things need to know about this and connecting a bunch of signals would be a lot for that, so I think a global for this will be ok, especially since I need to call it from a specific Global class. But most of the work needed to be put into this is for 2D puzzles. I think the design I have right now will work well, but will be good to have it in sooner to test. The plan right now is to have this cursor you can move around and when you select a node, it highlights all of the connected nodes' path connections. Then I want to make it so you can use the controller bumpers to kinda "tab" through each of those nodes to move then if the player wants to. This comes from player testing where people told me they solved the 2D puzzles by moving nodes that are connected, but far apart, towards each other. I do something similar when solving the puzzles, so I think it would be a good course of action.
 ## March 12, 2026
 ### Dialogue Audio
 I've been wanting to do TTS for the dialogue for a while now, but after looking into it, I think that doing recorded voice over that's manipulated will be better. I'll have more control over the tone of everything and then I also don't have to worry about another system failing. I would love for the text to appear as the dialogue audio continues and I think I can still accomplish this with recorded dialogue. I think using a JSON files will still be a good route of action. I can copy the same script that's spoke and then use markers in the JSON files to control how quickly text is revealed or breaks in between text. Might be a bit tedious, but I know systems like this exist, so I'm hoping the only trouble will be having to go through the audio files and correctly getting words to appear along with the audio. I'll have to try it out, but I think I should be able to look at waveform in Ableton and see how long phrases and breaks are. I think as longs as I keep a consistent cadence in mind when recording, that should work pretty well.
