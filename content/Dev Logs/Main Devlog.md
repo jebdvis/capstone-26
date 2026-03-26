@@ -2,6 +2,34 @@
 title: Main Devlog
 ---
 # Week 10
+## March 24, 2026
+### Week 10/11 Progress Report
+#### Week 10/11 Goals
+- Testing at all steps
+- Full controller implementation
+	- Big thing here is the 2D stuff with controller. I've got a good idea of how the puzzles will work in 2D after talking with some people on what they think would make this very mouse heavy system work with a controller
+- Finish Up 3D and 2D Assets
+- Dialogue system setups; would love to finish this if I have the time
+	- Probably JSON based
+	- Doesn't need to be too complicated; it's just one way text to player with TTS
+- Write dialogue for 2D stuff
+- Get sounds mostly implemented
+- Make transition between states more fluid
+	- Right now starting and finishing puzzles is very sudden
+- Planning out juice and other Audio/Visual elements I want to add in to help match this world and environment to the narrative beats I have formed.
+	- Also really want to get a good amount done on this, but lower on priority list
+
+I was a bit worried over break about how much I had, but I got a good amount of things done, namely the dialogue system and controller stuff. I do wish there was a bit more done, but I'm still happy with what I have. I've still got a good amount left to do, but I still see a path for everything which is great. I do wish I had managed my time better, but break was a bit rough for that. Been spending a lot of time doing work out of the house and I think I better get back to doing work from home these next few weeks to make sure I can get the things I need to get done. Got some good feedback on everything as I worked on things; I made sure visuals, controls, and dialogue all worked with people as I worked on them. I think I expected dialogue to be a bit more rough to do, but I'd say it was one of my more smooth sailing things. The animation stuff was strangely annoying for how simple it was, but I did kind of expect it to be weird since importing Blender to Godot is already strange.
+### Visual Works
+I worked on making the test chamber look a bit better. The textures of the chamber are pretty flat right now with just flat colors and other values to determine if the materials are rough or metallic. I added some noise textures to the normal map channel of the wall materials, which is similar to what I did with the floor. I wanted the walls to not have the same look as the floor, so I structured the noise to look almost like brushed concrete. It took a bit to hone in the look of it to make sure it wasn't too busy on the screen, but I got it to a good point where it makes things a bit more interesting but not something you focus on a whole lot. I also added some noise textures to some of the more metal components of the shutter and button to make them look a bit more interesting. Adding this noise works well with the shader and the lighting I have going; definitely a good move without having to add too much actual detail in textures.
+### Transition States
+I don't think the transition state of the terminal has to be too much, probably will just do a fade in and out on the camera. For the 3D puzzles I animated the shutter as well as the button to make things feel better since I've just had the visibility turn on and off so far. It was my first time bringing animation from Blender to Godot, and I don't think I did it the best way, but since they are just simple position and scale animations, how I have them implemented works for their purpose.
+## March 24, 2026
+### Black Hole Shader for 2D
+Made a lil black hole shader to make a gif of to put in the 2D view. I still need to render it out but I'm working on my laptop currently and don't want to spend the time to render a full gif out to try in the 2D view rn. Dis what the still looks like in it.
+![[Screenshot 2026-03-24 at 12.09.50 PM.png]] Going to render it fully out later.
+## March 19, 2026
+On a plane rn, can't really take up the space I usually do with my controller and note pad and stuff, so I'm working on the 3D models in the test chamber. Original sketches, I had a bed and a terminal as the main objects in the room. I had made a terminal, but I think I'm going to redo it since it was made very quickly and also has some messed up geometry that is visible in engine. I had made a bed for original test renders of the project, but it's definitely too big, and I also think that it had far too much geometry to be in the game. Still this new bed will probably have the most geometry in the game, since for some reason I wanted to do a cloth sim(it's easier than modeling it, that's why). I won't be able to walk around in the scene to feel everything since I don't wanna pull my controller out of my bag in this cramped space, but thing's should at least be correct proportionally, so placement and scale should be the only things I really need to move. I'll probably also look into doing the shutter for the test chamber as well. I've never done animation in Godot so that'll be fun. I think I should just be able to animate in Blender, which I do know how to do, then import into Godot, but I definitely need to look into that workflow.
 ## March 17, 2026
 ### Tutorialization Side Note From Today
 While writing that first draft, I was thinking about tutorializing the portals. I don't really want to do it through the dialogue, since it's supposed to be an unintended effect of the black hole. Means there needs to be more visual stuff. So how can I make it visually known that you put a ball in one side and then you have to line them up and come out the other side???? IDK. Maybe I make there be an effect that's like something winding up the closer you get the portals visually. They already kind of look like the solve points so I think players might put the balls in them, but we shall see.
