@@ -1,7 +1,22 @@
 ---
 title: Main Devlog
 ---
-# Week 10
+# Week 12
+## March 25, 2026
+### Week 12 Goals
+- Actually finish 3D assets
+	- Test chamber falling
+		- Get it to switch out those assets as the game progresses
+	- Need to finish some stuff in the room the player is in; modeling and texturing
+		- Texturing will probably just be with noise textures again
+- Sound 
+	- Recorded voice stuff
+	- Environmental Sounds
+- Start screen
+	- Don't think I'm going to do saves for such a short game so it'll just be a place in between opening the game and playing
+- Various bug fixes
+- Juice
+# Week 10/11
 ## March 24, 2026
 ### Week 10/11 Progress Report
 #### Week 10/11 Goals
