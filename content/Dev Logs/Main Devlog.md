@@ -1,7 +1,51 @@
 ---
 title: Main Devlog
 ---
+# Week 13
+## April 2, 2026
+### Week 13 Goals
+- Storyboard Video
+- Draft Video Script
+- Audio/Visual Effects that need to be added
+- Planning on how I want website to look
 # Week 12
+## April 1, 2026
+### Week 12 Progress Report
+#### Week 10/11 Goals
+- Testing at all steps
+- Full controller implementation
+	- Big thing here is the 2D stuff with controller. I've got a good idea of how the puzzles will work in 2D after talking with some people on what they think would make this very mouse heavy system work with a controller
+- Finish Up 3D and 2D Assets
+- Dialogue system setups; would love to finish this if I have the time
+	- Probably JSON based
+	- Doesn't need to be too complicated; it's just one way text to player with TTS
+- Write dialogue for 2D stuff
+- Get sounds mostly implemented
+- Make transition between states more fluid
+	- Right now starting and finishing puzzles is very sudden
+- Planning out juice and other Audio/Visual elements I want to add in to help match this world and environment to the narrative beats I have formed.
+	- Also really want to get a good amount done on this, but lower on priority list
+
+Happy with the work I got done this week, even though I had to spend a lot of the first part of it on another paper. Spent a lot of my waking hours during the week working on this, and though I wish I had been able to spread it out more, it was still good work done. Everything's pretty much at the point of being done, except for juice and audio stuff. Think I can make things feel better overall, but it's all at a good point currently.
+### Major Bug Fix
+There was a major bug I've had forever that made it so the movers on the paths could combine. I have spent so long looking at that bug. It was a less than sign that needed to be a greater than sign. Something I thought I'd changed many a time..... But it's fixed!
+### 3D Modelin Finishes
+I remodeled the terminal to fit in the room a bit better and make it a bit less blocky to add a bit more organic shape to the test chamber, but can't have too much, cause then it'll be too human! I also added a door to the chamber since I wanted to make the player feel like there's an escape, even though there isn't...
+![[Screenshot 2026-04-02 at 9.11.08 AM.png]]
+### Camera Lock
+I got the camera to lock to a specific location when doing the 3D puzzles. I used an addon for Godot called Phantom Camera. I've used it in the past for 2D games, but it also has great applications in 3D. It's great for making a really juicy camera, but it's also great for interpolating positions for camera, which is just what I needed to make a locking camera that also returns to the player after they finish the 3D puzzles.
+## March 30, 2026
+### Implementing Game End
+I have the 3 different "Stages" of the chamber falling apart in the engine now. The last two stages are technically the same, but the last one has an animation player for the falling apart animations. When the player starts the last puzzle, the puzzle begins to morph, which I turned up the intensity of since I don't need it to be solvable. After about 15 seconds, the animations of the chamber start to play, and when the last part of the animation plays, a piece of rubble flying at the player, the game goes black and after a few seconds returns to the start screen. There's some glitching in the geometry but that's just from me testing the final part of the chamber falling apart. The logic for when the chamber geometry switches just follows the state machine that controls when and what puzzles are loaded.
+![[Screen Recording 2026-04-01 at 10.41.54 AM-1.mov]]
+### Game End
+So now that I have the test chamber falling apart, it game me a solid idea for how to end the game. I was already planning to end the game on the final 3D puzzle, but I wasn't quite sure how to end it, but I think this falling apart will work well for it. These parts of the chamber are cut out in Blender are now separate objects meaning they can actually move around. Since the whole anxiety part of the game is the black hole in the player's chest growing as the game progresses, I was going to have some black hole light bending shaders around the players screen, but I think to actually end the game I'm going to make the last 3D puzzle kind of a bit more of a cinematic thing, where the player can move around the morphing puzzle but it's more of just a false control, as the puzzle begins to more and then eventually the shader gets more intense and the parts of the chamber falling apart start to maybe float and then get thrown at the player, leading the screen to black. Maybe not as ambiguous as I originally wanted, but I think it still can be. I will also mention that the last puzzle is currently not solvable because of bugs and I promise that this is not a way for me to not fix the bugs. I did already want the last puzzle to not be solvable, but I think that this just works well enough to end the game and it happens to coincide with a bug that already makes the last puzzle not finishable, the bug being the portals not working when the puzzle is morphing.
+### Breaking Apart Chamber
+I'm breaking apart the test chamber currently in Blender. I've pretty much copied what I had before and am just cutting out part of the walks and rotating them away from their positions to look like the structure is falling apart. I think there's only going to be two stages of the test chamber, one where it's not falling apart and one where it is. woahhhhhhh so much variation. Anyways, I think it also gave me a solid idea for how to end the game.
+### Sound Stuff
+Made the sound for the balls moving on the tracks. I recorded a few takes of me sharpening a kitchen knife on a whetstone and then edited it to loop and mixed some of the background noise out so it could fit better in the game. I made it so that the pitch of the noise shifts as the speed of the mover changes to make it feel better. I also happened to fix a bug during this too, which caused the movers to quickly loose speed if the path they are on switches direction, which I don't want to happen. I didn't really notice it before, but hearing the sound stop quickly made me notice it a lot, but it was a pretty easy fix of using absolute value of speed. This took me way to long to do and frankly it's not even where I want it to be yet which sucks.
+### Start Screen
+I rendered out an animation of a black hole for the start screen. It's the same black hole in Blender I use in the 2D part of the game, but I changed the color, made it a bit higher fidelity, and added some stars in the background to make it more spacey.
 ## March 25, 2026
 ### Week 12 Goals
 - Actually finish 3D assets
