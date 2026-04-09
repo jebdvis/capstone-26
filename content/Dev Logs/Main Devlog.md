@@ -2,6 +2,34 @@
 title: Main Devlog
 ---
 # Week 13
+## April 8, 2026
+### Week 13 Progress Report
+#### Week 13 Goals
+- Storyboard Video
+- Draft Video Script
+- Audio/Visual Effects that need to be added
+- Planning on how I want website to look
+
+Do think I took a bit of a break from capstone stuff, but still got a decent amount done. Thought this shader was gonna take longer which is nice I have it done now, I pretty much just have to do sound stuff now. Wish I had some more visual idea for my site, but I don't see too many issues with figuring that out. I have some good visual style to go off of from the game, so I think it'll be good.
+### Shaderssss(Finally)
+I took the mask I had showcased in my presentation the other day and added on the light distortion shader. I got the shader off of godotshaders.com but modified it a good amount to work with this mask I made, that I also modified a bit to make it elliptical. It doesn't currently intensify yet, but the different parameters on it are exposed, so I can just change it with the state machine.
+![[20260409-0524-24.1091549.mp4]]
+### Website Prelim
+#### Pages(Names Subject to Change)
+##### Game/In-Game
+Talks about what the game is in the way it exists when someone plays it. What do you do in it, what does it look like, how does it play, etc. Most of the classic stuff you would find on a page for a game, be it Steam or itch.io. I see this being the main page, since it works for both people who are interested in the game and my work on the project. Other pages feel more specialized towards people who are interested in the project as a whole rather than jus the game. Also just showing the game presents a good base for looking at the other pages; feels good to say first here's what I did and then having that context people can choose to see how and why I did it.
+
+Download for game here?!?!?!?!?!?!? Don't know if Github Pages allows that or if there's security issues. Frankly, I just don't want to also make a itch.io page right now. But maybe...... I will have assets for it.....
+##### "Meta" Game
+This is stuff like design philosophy, why did I make the choices I made, actually explicitly talk about what's in my elevator pitch, etc. This could probably also include some stuff about technical aspects, but that'll probably fit better in process. I have more personal connection to the reason I made the game so I think it's good to talk about here. I also want to talk about the mindset I chose in designing and developing the game, such as subtractive game design or how I designed systems. Stuff like that applies to the whole process, so I think it'd be good to include it separately. Putting it before Process could be good since it just gives a bit more context to those steps; I don't have to explain ever time that I make a system why I chose for it to be component based, I can just say here that I utilized Godot's Node and Resource system to make component based systems and then that applies to all the times I made those systems and changed them.
+##### Process
+This is talking about the iterations of the projects. There's of course the technical parts that changed over time, but also the design of the game and how that changes, which also kind of ties into the previous page I talked about. I think process would be good to talk about the whole game at each iterative step, instead of separating out each aspect of the game(ex. audio, controls, gameplay) and doing iterations for each of those. I don't think there's any one aspect of the game that deserves its own iterative process and it just makes more sense for me working on it solo. Everything was worked on in tandem, so not separating aspects also matches what my actual process looked like.
+##### Creator
+Short page about me. Not really worth talking about what I did on the project in too much detail since that's pretty much just the whole website. This could be altered to a more general info page on other things about the project, since I also want to include credits for some of the aspects of the code I used from other people; pretty much most of the overlay shader code. I need to check the licenses for the code; I know I am allowed to use them, but I also think that the code I used also might be technically usable without crediting, but either way I still want to include that.
+## April 7, 2026
+### Storyboard
+![[IMG_2107.jpg]]
+![[IMG_2108.jpg]]
 ## April 2, 2026
 ### Week 13 Goals
 - Storyboard Video
