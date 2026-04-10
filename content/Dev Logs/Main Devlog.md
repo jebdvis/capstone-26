@@ -1,6 +1,14 @@
 ---
 title: Main Devlog
 ---
+# Week 14
+## April 10, 2026
+### Week 14 Goals
+- Static Assets
+- Video Assets
+- In Game Sound
+- Tweak Game Stuff to Make Feel Better
+	- Make sure current puzzles work
 # Week 13
 ## April 8, 2026
 ### Week 13 Progress Report
