@@ -2,6 +2,43 @@
 title: Main Devlog
 ---
 # Week 14
+## April 12, 2026
+### WHAT STILL NEEDS TO BE DONE
+#### Juice (Audio/Visuals)
+Game is very quiet right now, besides the sounds from the movers on the puzzles and the dialogue. Sounded fine before that, but now there's some sounds, everything else is so quiet. Other things feel static as well, specifically the camera/terminal. With the chamber falling apart, could definitely get some screen shake in there. Chris also mentioned having more connection of the black hole device to the puzzles, so I think there's room for juice there.
+##### Audio
+- Global script to control fading for sounds????
+- Start screen ambient sounds
+- Test chamber ambient sounds
+	- Fluorescent lights
+	- Pipe sounds?
+	- Terminal Sounds
+- Terminal boot up and boot down sounds
+- Shutter opening
+- Black hole device power up sounds 
+	- Probably around the time of the shutter opening
+- Chamber falling apart
+	- Probably can happen after doing terminal visit
+	- Also for when the chamber falls apart with animation at end
+- Sounds for puzzle mechanics
+	- Portal
+	- Gate
+##### Visual
+- Screen shake
+	- Probably can be function on camera that global script controls
+- Visual power up of device?
+	- Possibly some kind of shader effect at bottom of screen with sound mentioned above
+- 2D puzzle nodes floatiness
+- Some kind of flashing carrot for the dialogue on the terminal screen.
+#### Dialogue
+Please rewrite the script. It can be better. And now you don't even have to worry about rerecording stuff. So there's no excuse....... I think tutorial for portals might be done through this. I didn't really want to, but they're very abstract in having to get the ball in them, then line them up visually; I think that's going to be very hard to communicate visually. While I don't think it's impossible I'm not sure I have to time to get that down.
+#### Puzzles
+Tweak em. Make sure they work. They do work, but def wanna make sure they feel good.
+### Dialogue Speech
+I've been saying I'm going to record voiceover for the dialogue, but at this point it's really not something that deserves that much time. I want the speech to add to the surrealism and creepiness of everything, but recording, editing, making sure a bunch of dialogue audio is too much time that could be spent on other things. When researching, I found an add-on that does kind of Animal Crossing speech, not just that style but more about the sounds that correlate to the text. I implemented it with the dialogue system I wrote and it works great, even simplifies some of the code I had written. The add-on even controls how the text is revealed on screen, which is a bit better than the one I had I think. It plays audio files dependent on the letters of words so it even sounds like a voice but kinda not. I also made it have a randomized pitch, so it's a robotic, almost real sounding voice, which I think still serves the purpose I wanted without the large time that it would've taken to record all the voice and make sure it fit. Even though this deprecates a system I had made, I'm very happy with this switch. It works very well and does what I need it to. It's not a vital component of the game, so I don't need that fine grain control of a hand made system, but it's also written in the same language the game is written in, so it's still very easy to manipulate when I need it to. The only change that I still need to make is edit all the JSON files, which is literally just removing things from it, they don't even need to be structured differently. Just turning the array of arrays with objects into an array of strings. Great simplification with great results.
+## April 11, 2026
+### Da Website
+Made a repo for the website. Not much else tbh. Was going to start more on it, but def needs more design first. I think I'm going to use colors from the color palette I use for the game's dither shader, but the palette itself is actually kinda big, since it has multiple shades for each color.
 ## April 10, 2026
 ### Week 14 Goals
 - Static Assets
