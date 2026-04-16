@@ -17,7 +17,7 @@ I tried building the game and playin through it a bit just to make sure all the 
 I've got a rough website outline create based on n-o-d-e.net. It's fairly basic, but I think it fits the cyberpunk aesthetic I'm going for. I want to get more into cool website making, but I don't think this is the project to get very into it. It's simple, but I think it will be good for having things put together and looking decent for documentation. 
 ### Static/Video Assets
 Static images are good for the website, maybe for the video in how I have it planned out. I think the video below will be a good replacement intro for the start of the video. Waking up, then going over to the terminal, where most of the video will take place. I might rerecord though, depending on how I will do the rest of the video. I might need to actually just straight up record the whole thing in the terminal and have a separate script, but well see.
-![[Screen Recording 2026-04-15 182434.mov]]
+![[Screen Recording 2026-04-15 182434-1.mp4]]
 ![[Screenshot_2026-04-15_150117.png]]
 ![[Screenshot_2026-04-15_150441.png]]![[Screenshot_2026-04-15_173452.png]]![[Screenshot_2026-04-15_174124.png]]![[Screenshot_2026-04-15_183649.png]]
 ### On Screen Indications
