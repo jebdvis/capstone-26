@@ -2,6 +2,35 @@
 title: Main Devlog
 ---
 # Week 14
+## April 14/15, 2026
+### Week 14 Progress Report
+#### Week 14 Goals
+- Static Assets
+- Video Assets
+- In Game Sound
+- Tweak Game Stuff to Make Feel Better
+	- Make sure current puzzles work
+I got a good amount of stuff done, my game is feeling almost there, minus a few things, mainly rewrite on script and some on screen indicators for learning controls in the beginning, though I think those things will be fairly straightforwards. I'm going to try and get those done tomorrow when this is due. I want to get a build out to people this weekend to make sure things are good. I've got a few people who want to play it which is good, as well as some people who have not played it yet, which will be interesting to see about. I felt alright on how much time I spent working this week, but with how much other stuff I have to do it also feels like I spent a lot of time on those things and not on this but realistically I think I'm still in a good spot. I'm like maybe a bit worried about the website since my brain doesn't work well with html and css, but I think it'll be all good. I think the setup I have right now will be simple enough to get things on the page and looking good. I've been playing pretty much all of the puzzles to test things out, so I know they all work which is good, it's just if there's things about the puzzles that are weird and people can't figure out. People have also played these puzzles before though, so I don't think it will be too much of an issue.
+### Game Build
+I tried building the game and playin through it a bit just to make sure all the systems work, and everything's looking good. I still want to add a few more things, but I think it's looking good for being able to export. 
+### Website Instantiation
+I've got a rough website outline create based on n-o-d-e.net. It's fairly basic, but I think it fits the cyberpunk aesthetic I'm going for. I want to get more into cool website making, but I don't think this is the project to get very into it. It's simple, but I think it will be good for having things put together and looking decent for documentation. 
+### Static/Video Assets
+Static images are good for the website, maybe for the video in how I have it planned out. I think the video below will be a good replacement intro for the start of the video. Waking up, then going over to the terminal, where most of the video will take place. I might rerecord though, depending on how I will do the rest of the video. I might need to actually just straight up record the whole thing in the terminal and have a separate script, but well see.
+![[Screen Recording 2026-04-15 182434.mov]]
+![[Screenshot_2026-04-15_150117.png]]
+![[Screenshot_2026-04-15_150441.png]]![[Screenshot_2026-04-15_173452.png]]![[Screenshot_2026-04-15_174124.png]]![[Screenshot_2026-04-15_183649.png]]
+### On Screen Indications
+I want to add indicators on screen for the first puzzle to try and get people used to the controls. I'm thinking just a few guided icons on screen of the joy sticks pointed in certain directions that the player has to match. I'm doing this mostly because players usually don't know how to do the joysticks in opposite direction. They get how to point the joysticks in one direction of course, but the opposite directions to make the puzzles roll is a bit of a new concept, though once they know how to do it, it's generally used.
+### Screen Shake
+I've got a screen shake for the camera that I can activate from a global. It really only need to be accessed from one script, but it's a global that's actually set up correctly, so it's only capable of adding "trauma" to the screen shake. The other globals I have set up are fine, but this one uses signals, so I'd say it's a bit more safe and correct in its setup.
+### Sound
+I've edited and added a lot of sounds. There's probably still some more, but I want to go through everything first and see if there are empty feeling points of sound. Had a problem where no sounds would play when the game restarted, but that was just a thing I had where I was muting the audio bus for everything, which took way too long to find. 
+### Particles
+I adde some particles to when the player starts the puzzle, as well as a sound, so it now looks like the black hole device is starting up. I may also make it spark a bit more with the unstableness of the device too, especially on the last one.
+## April 13, 2026
+### Sound Stuff
+I've got the ambient start screen sound in, a kinda low, deep sound that loops. I also have a global script that has a function that fades the sound out when the game is started. It can also fade out any other AudioStreamPlayer in the game as well, with customizable time.
 ## April 12, 2026
 ### WHAT STILL NEEDS TO BE DONE
 #### Juice (Audio/Visuals)
