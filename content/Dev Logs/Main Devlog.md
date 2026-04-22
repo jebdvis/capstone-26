@@ -151,7 +151,7 @@ I got the camera to lock to a specific location when doing the 3D puzzles. I use
 ## March 30, 2026
 ### Implementing Game End
 I have the 3 different "Stages" of the chamber falling apart in the engine now. The last two stages are technically the same, but the last one has an animation player for the falling apart animations. When the player starts the last puzzle, the puzzle begins to morph, which I turned up the intensity of since I don't need it to be solvable. After about 15 seconds, the animations of the chamber start to play, and when the last part of the animation plays, a piece of rubble flying at the player, the game goes black and after a few seconds returns to the start screen. There's some glitching in the geometry but that's just from me testing the final part of the chamber falling apart. The logic for when the chamber geometry switches just follows the state machine that controls when and what puzzles are loaded.
-![[Screen Recording 2026-04-01 at 10.41.54 AM-1.mov]]
+![[Screen Recording 2026-04-01 at 10.41.54 AM-1.mp4]]
 ### Game End
 So now that I have the test chamber falling apart, it game me a solid idea for how to end the game. I was already planning to end the game on the final 3D puzzle, but I wasn't quite sure how to end it, but I think this falling apart will work well for it. These parts of the chamber are cut out in Blender are now separate objects meaning they can actually move around. Since the whole anxiety part of the game is the black hole in the player's chest growing as the game progresses, I was going to have some black hole light bending shaders around the players screen, but I think to actually end the game I'm going to make the last 3D puzzle kind of a bit more of a cinematic thing, where the player can move around the morphing puzzle but it's more of just a false control, as the puzzle begins to more and then eventually the shader gets more intense and the parts of the chamber falling apart start to maybe float and then get thrown at the player, leading the screen to black. Maybe not as ambiguous as I originally wanted, but I think it still can be. I will also mention that the last puzzle is currently not solvable because of bugs and I promise that this is not a way for me to not fix the bugs. I did already want the last puzzle to not be solvable, but I think that this just works well enough to end the game and it happens to coincide with a bug that already makes the last puzzle not finishable, the bug being the portals not working when the puzzle is morphing.
 ### Breaking Apart Chamber
@@ -293,11 +293,11 @@ Before our last puzzle we, again, want to extend to you our warmest of welcomes 
 You're contributions will not go unnoticed! Now let's get this last puzzle under our belt!
 ### Dialogue Implemented
 yayyyy it work. Plays dialogue after the 2D puzzle is completed, and lets the player click through the phrase groups.
-![[2026-03-16 15-36-19.mov]]
+![[2026-03-16 15-36-19.mp4]]
 ## March 15, 2026
 ### Dialogue With Audio Test
 Recorded a test snip for dialogue just to prove it works. I'm currently trying to twork on implementing that whole system in line with the 2D puzzles and terminal so I just want to make sure it works before doing all that. Sounds like dog butt, but who cares.
-![[DialogueAudioTest1.mov]]
+![[DialogueAudioTest1.mp4]]
 ### 2D Visuals
 Worked on some UI updating for the 2D puzzles, making things look a bit cleaner, adding space for dialogue stuff, constraining puzzle 2d node movement so they stay only in their box. Green thing is the placeholder cursor and where it says "E To Continue" is just testing the text box for dialogue.
 ![[Screenshot 2026-03-16 at 12.02.41 PM.png]]
@@ -309,7 +309,7 @@ Started to make everything function on controller. The first big thing was makin
 I've been wanting to do TTS for the dialogue for a while now, but after looking into it, I think that doing recorded voice over that's manipulated will be better. I'll have more control over the tone of everything and then I also don't have to worry about another system failing. I would love for the text to appear as the dialogue audio continues and I think I can still accomplish this with recorded dialogue. I think using a JSON files will still be a good route of action. I can copy the same script that's spoke and then use markers in the JSON files to control how quickly text is revealed or breaks in between text. Might be a bit tedious, but I know systems like this exist, so I'm hoping the only trouble will be having to go through the audio files and correctly getting words to appear along with the audio. I'll have to try it out, but I think I should be able to look at waveform in Ableton and see how long phrases and breaks are. I think as longs as I keep a consistent cadence in mind when recording, that should work pretty well.
 
 I made tha thing. It reads the JSON files and prints text sequentially. I don't have audio to test it with yet, but I think it'll work alright, as long as I transcribe the timing of things correctly. The function just creates a series of tweens for each chunk of phrases or breaks, so it should be pretty easy to create something that lets players click to the next set of phrases on each page.
-![[Screen Recording 2026-03-12 at 9.05.30 PM.mov]]
+![[Screen Recording 2026-03-12 at 9.05.30 PM.mp4]]
 ### Week 10/11 Goals
 - Testing at all steps
 - Full controller implementation
@@ -351,7 +351,7 @@ I'm here from the future to say that the code to keep the solve points and porta
 
 I've also got the color coding working on everything, so when you set the color of the movers' emission texture, it also sets that same emission to the corresponding gate.
 
-![[Screen Recording 2026-03-11 at 10.34.40 PM-1-1.mov]]
+![[Screen Recording 2026-03-11 at 10.34.40 PM-1-1.mp4]]
 ## March 10, 2026
 ### Next Steps
 I'm going to get those models implemented next, for sure. For other improvements, I'm going to try out tutorializing the controls. I'm going to try out a few different puzzles for the tutorials; they'll all have one mover and then I'm going to play around with the form of the paths on the puzzle. Originally I was thinking of just having a single track where the player has to move the mover from one side to the other, but that might be jarring with the rest of the game being puzzles in cube shapes. So I'm also going to try a puzzle thats a simple cube shape puzzle, as well as a mix of both: a cube shaped puzzle but its just a singular non-branching track. I'm then going to reorder the mechanic introduction of the puzzles, but that shouldn't need any editing to the puzzles themselves. That should be a good point to test again and compare with some of the testers from last week.
@@ -652,10 +652,10 @@ Having this level progression and some interactables is making me want some more
 Definitely didn't get the 3D model generation I wanted to get done, butI'm happy with the other ability work and tweaks that I made. I'm starting to feel like the stuff I have isn't just a pile of things, even if it hasn't been a pile of things from the start, just things that couldn't go together yet. I feel like I've got a good motivation to work after I've got these new mechanics down, so I'm excited to get the puzzles feeling better and putting things together.
 ### 2D Assets
 Created a more full 2D scene for the game. Definitely not how I want it to look in final, but a better feel for how it'll be in the game. Used a concept for made a few weeks ago for how the layout is.
-![[Screen Recording 2026-02-18 at 11.12.16 PM.mov]]
+![[Screen Recording 2026-02-18 at 11.12.16 PM.mp4]]
 ### Newwwwww Portals
 I worked on the portals yet again. After testing and getting feedback on portals, they were just not it, so they were changed to something that feels better and has more opportunities to matter in terms of gameplay. The basic idea is that the portals still teleport like normal, but to make a mover teleport, the mover need to be sitting in a portal and then the portal pairs have to line up visually. Maybe a bit confusing in words, just look at the video and it'll make sense(maybe). Definitely some fun juice options for this.
-![[Screen Recording 2026-02-18 at 11.14.38 PM.mov]]
+![[Screen Recording 2026-02-18 at 11.14.38 PM.mp4]]
 The portals work by looking at where the portals are in the camera screen space and just checking if they are close to each other, then teleporting the mover if they are close.
 ### Control Tweaks
 I changed up the controls a bit to make them feel a bit better. I kept how the rotation works using the joysticks, and added some capability of finer movement. Before, the rotation speed of the puzzle was either nothing or full speed, which didn't feel great, especially with a game where you kinda need some fine control of movement. Pretty much just makes it easier to do finer movement with the current controls. Not a huge thing, but I think it's overall a great improvement for the game.
@@ -663,9 +663,9 @@ I changed up the controls a bit to make them feel a bit better. I kept how the r
 After yesterdays advancements, there were still some bugs with the paths moving, and the meshes didn't line up with the paths like they need to. The main bugs of the ability were with the bounds in which the points were allowed to move;  where in space and how far from their original location. Those were pretty easy to fix up after doing some testing on some logic in the code.
 
 The other bigger unresolved issue was that the meshes were not lining up with the paths. It looked kinda cool but it wasn't anything that made sense. You can also see how the paths were acting weird in the video below.
-![[Screen Recording 2026-02-17 at 9.05.00 PM.mov]]
+![[Screen Recording 2026-02-17 at 9.05.00 PM.mp4]]
 I had to change how I drew the path mesh, which wasn't too big of a hassle, but I wish I had just done it earlier cause I wanted to do it this way I did it not, but I was too lazy to do it earlier. After fixing the mesh and path behavior issues, it feels pretty good, even with a puzzle not designed for it.
-![[Screen Recording 2026-02-18 at 11.18.31 PM.mov]]
+![[Screen Recording 2026-02-18 at 11.18.31 PM.mp4]]
 ## February 17, 2026
 ### Morph Ability cont.
 Now that I could collect the points I wanted to move, I had to figure a way out how to move those said points. It was kinda of annoying cause of how Path3Ds and Curve3Ds work in Godot; the points inside of the curve that is stored on the paths are just really weird to access since you have to know the index of the points to access them since you can't just get the array of points on the curve. I'm constantly flipping the points in the curve arrays to make sure that the paths are pointing downwards, so I need to know when the points are being flipped, which I just tracked through the point tracking dictionary. The dictionary that stores all the points eventually became a dictionary of arrays that were full of dictionaries that had arrays inside of them. A very optimized system of variables. Anyways, it let me track all of the necessary information. 
@@ -953,7 +953,7 @@ After passing this annoying issue of setting the needed variables for this effec
 ## January 26, 2026
 ### Newwwwwww Controls
 I've been working on my new control scheme for my game, and have it in a working state today. Tested it with some folk, who found the controls initially confusing, but once gotten the hang of, felt a lot more fun to use than controller axes being transposed to specific rotation axes. The control scheme is a bit similar to Katamari's controls. You can use both joysticks pointed in a direction to roll that direction. I'm also testing being able to point just a single joystick to be able to rotate the puzzle. Like in Katamari, as well, you can do the joysticks in opposite direction in the up and down vectors to rotate the puzzle. In the video below, you can see the joystick movements and the corresponding movement of the puzzle.
-![[Screen Recording 2026-01-26 at 3.24.52 PM.mov]]
+![[Screen Recording 2026-01-26 at 3.24.52 PM.mp4]]
 I intend to test these controls with people who don't have as much familiarity with gamepad controllers to see how they feel the controls work. I think the controls are not necessarily intuitive with how controller joysticks are usually used, but make sense in how they affect the puzzles rotation in its own context.
 ## January 22, 2026
 ### Week 3 Goals
@@ -987,7 +987,7 @@ The time to make some of the things I made definitely exceeded my expectation of
 ### Controls cont.
 I've gone through much strife today. Before that, I forgot to finish off talking about the new controls I wanted to implement yesterday. Started using quaternions to do the new control scheme, which seems promising. They're weird math things, but on the most basic level, they have two components: a 3D normalized vector that points away from the object's center and an amount of rotation around that axis. I'm heavily simplifying that, if that's even what they actually are. Either way, the controls of it are half baked, but I think with some smoothing out of the code it'll work well.
 ### 2D Puzzles Implementation
-I spent most of my day implementing the 2D puzzles into engine to be able to show them for Iteration 1 this Thursday. It took so long and I had problems that were annoyingly simple to fix, yet the people of StackOverflow and the Godot forums, as well as my sludgified brain could not come up with solutions quick enough to fix my problems. I created a tool that lets me add nodes into my Godot scene, connect them through the inspector, and then save that setup of nodes to a file. Confusingly, I'm not exactly talking about nodes as in the Godot sense, but the "nodes" in these 2D puzzles are also represented by Godot's node system. ![[Screen Recording 2026-01-20 at 10.46.37 PM.mov]]The shown puzzle is fairly simple, but it showcases the basic mechanics of this puzzle and how it works overall. If you looks closely, you'll be able to see some of the nodes collapsing on each other. That's a byproduct of how the dragging mechanism of the nodes works and I'm just too lazy to fix it right now(but I know how to :)). Luckily I'm not too lazy though; you can see the lines in between the nodes flicker in the video above, but I just thought of a simple method change I had to do to get rid of that. I'm happy with how it turned out, despite how many issues I had with it.
+I spent most of my day implementing the 2D puzzles into engine to be able to show them for Iteration 1 this Thursday. It took so long and I had problems that were annoyingly simple to fix, yet the people of StackOverflow and the Godot forums, as well as my sludgified brain could not come up with solutions quick enough to fix my problems. I created a tool that lets me add nodes into my Godot scene, connect them through the inspector, and then save that setup of nodes to a file. Confusingly, I'm not exactly talking about nodes as in the Godot sense, but the "nodes" in these 2D puzzles are also represented by Godot's node system. ![[Screen Recording 2026-01-20 at 10.46.37 PM.mp4]]The shown puzzle is fairly simple, but it showcases the basic mechanics of this puzzle and how it works overall. If you looks closely, you'll be able to see some of the nodes collapsing on each other. That's a byproduct of how the dragging mechanism of the nodes works and I'm just too lazy to fix it right now(but I know how to :)). Luckily I'm not too lazy though; you can see the lines in between the nodes flicker in the video above, but I just thought of a simple method change I had to do to get rid of that. I'm happy with how it turned out, despite how many issues I had with it.
 
 My biggest issue was with the Resource data type that Godot has. They're really useful and cool, but there's just a few esoteric things that the documentation decided to hide away in places that were terribly difficult to reach. 
 	I'm not one to usually use AI for my projects, and I even resorted to that to fix my problems. It still only managed to get me closer to my solution, but it honestly didn't feel like it did a whole lot to really help. It failed to give any reasonable answer that worked and in its rambling of solutions that failed to do anything, I at some point had an idea about what could work. 
@@ -1070,7 +1070,7 @@ My main goal for this week is to get get a component system working for my puzzl
 The ability components that I want for a puzzle can be added to an array in the game engine inspector, which then the puzzle itself reads the abilities it has attached to it, executing the specific code per ability at the script level of the puzzle. Since the components are executed by the puzzle they are attached to, there isn't any dependency between the components. As of Jan 12, I have a component that allows for the player to "shift" the puzzle between two different puzzles while working on them at the same time.
 
 ### Shifting Ability Example
-![[Screen Recording 2026-01-12 at 3.18.59 PM.mov]]
+![[Screen Recording 2026-01-12 at 3.18.59 PM.mp4]]
 
 This is, of course, visually lacking, but allows me to begin to test the capabilities of this mechanic. I'm writing this almost immediately after finishing this mechanic, so I have not had time to test, but I will be shortly.
 
