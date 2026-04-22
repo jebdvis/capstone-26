@@ -13,6 +13,12 @@ I added continual sparking and spark noises on the last puzzle. The sparking par
 ## April 16, 2026
 ### On-Screen Indicators
 I made indicators to simply prompt specific movements for the player to get them to see what different things  with the controls will do, it's not in-depth at all, but I just need something to make sure people know that they can rotate the puzzles clockwise and counter clockwise. In testing, specifically with Danny, I found that the controls don't feel good when you cant to that or rather when you don't know you can do that.
+### Week 15 Goals
+- Finish Website
+- Finish Video
+- Finish up tutorial
+- Juice
+- Edit dialogue
 # Week 14
 ## April 14/15, 2026
 ### Week 14 Progress Report
