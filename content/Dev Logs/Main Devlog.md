@@ -1,6 +1,18 @@
 ---
 title: Main Devlog
 ---
+# Week 15
+## April 20, 2026
+### Website
+More theming on website and setting up formatting for pages. Got a working nav bar for my pages. 
+## April 17, 2026
+### Edited Dialogue
+Some of the dialogue kinda sounded like I was talking or it lacked the right context, so I changed it up a bit. I also added in some dialogue to explain the portals, since I'm saying the company added them to the puzzles to counteract the entanglement of the device. I also changed something in the code since the dialogue popped up on screen very shortly before the tts started talking. That's gone now though, so the text only pops up as it's "said".
+### Other Juice
+I added continual sparking and spark noises on the last puzzle. The sparking particles and noise happens at the start of every puzzle, but this last one it happens every few seconds to help showcase the more intense instability of the device. I also added some sparking particles and sparking sound at a different pitch than the device sparking to let the player know that a sphere has teleported.
+## April 16, 2026
+### On-Screen Indicators
+I made indicators to simply prompt specific movements for the player to get them to see what different things  with the controls will do, it's not in-depth at all, but I just need something to make sure people know that they can rotate the puzzles clockwise and counter clockwise. In testing, specifically with Danny, I found that the controls don't feel good when you cant to that or rather when you don't know you can do that.
 # Week 14
 ## April 14/15, 2026
 ### Week 14 Progress Report
