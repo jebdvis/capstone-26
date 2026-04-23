@@ -2,6 +2,23 @@
 title: Main Devlog
 ---
 # Week 15
+## April 22, 2026
+### Week 15 Progress Report
+#### Week 15 Goals
+- Finish Website
+- Finish Video
+- Finish up tutorial
+- Juice
+- Edit dialogue
+I think I'm pretty much done?!?!?! Got these goals done this week. Feel pretty good about website and video. Could probably change a bit, but I will probably only make edits to things if there are definitely considerable changes. My stress for working on this went down as the week went by, which was nice. Now there's capstone but thats a Friday afternoon thing to worry about(but also not, I will make sure things are ready for it!!!!!). Not too much unexpected stuff. Pretty smooth week. Wish I could spend more time not doing doing this stuff this week but it's also the last week so I can't really complain. I feel good about everything, so I'm not too stressed.
+
+### Website Cont. 
+I started adding assets to the website once I had the video completed. I had some good suggestions of where to place the video with the text as well as where other assets would look good as well. 
+### Video
+I was able to do the whole video in about an hour or so. I recorded everything in engine, making a small little tool to let me show images on the terminal screen to have a cool visual for the video. I was also able to use the text to speech I had set up, which was nice. Showing the interaction of this game is a bit difficult in video form, so I focused a bit more on aspects that would draw people in to discover more about the game. Originally I was just going to have the text in the terminal kind of setting the stage for the game and then that would cut to the splash screen of the game, but after some suggestions from others, I added a short montage of the 3D puzzles of the game to give somewhat an idea of what the gameplay looks like.
+## April 21, 2026
+### Website cont.
+I spent most of today writing out all the pages for the website. I was fairly confident I could get CSS fixed and done quickly, so I just focused on the writing. I wrote everything out in html, which probably would have been better if I had written it on a separate document first, but it worked out. I got some suggestions and edits on the text, as well as suggestions for layout and where to put images.
 ## April 20, 2026
 ### Website
 More theming on website and setting up formatting for pages. Got a working nav bar for my pages. 
